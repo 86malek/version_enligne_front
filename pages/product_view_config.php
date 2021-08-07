@@ -97,7 +97,7 @@
 
 													echo '
 													<div class="large-image">
-														<img itemprop="image" class="product-image-zoom" data-zoom-image="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" src="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '" alt="' . $verif_product['eg_image_produit_title'] . '">
+														<img itemprop="image" class="product-image-zoom" data-zoom-image="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" src="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '" alt="' . $verif_product['eg_image_produit_title'] . '">
 													</div>
 
 													';
@@ -125,8 +125,8 @@
 												while ($verif_product = $PDO_query_verif_product->fetch()){
 
 													echo '
-													<a data-index="' . $verif_product['eg_image_produit_id'] . '" class="img thumbnail " data-image="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '">
-													<img src="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '" alt="' . $verif_product['eg_image_produit_title'] . '">
+													<a data-index="' . $verif_product['eg_image_produit_id'] . '" class="img thumbnail " data-image="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '">
+													<img src="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$verif_product['eg_image_produit_nom'].'" title="' . $verif_product['eg_image_produit_title'] . '" alt="' . $verif_product['eg_image_produit_title'] . '">
 													</a>
 
 													';
@@ -176,7 +176,7 @@
 
 													echo'
 
-													<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+													<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="https://data-vocabulary.org/Offer">
 														<span class="price-new" itemprop="price">' . $quickview_product_description['eg_produit_promo'] . ' TND</span>
 														<span class="price-old">' . $quickview_product_description['eg_produit_prix'] . ' TND</span>
 													</div>
@@ -186,7 +186,7 @@
 												}else{
 
 													echo'
-													<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+													<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="https://data-vocabulary.org/Offer">
 														<span class="price">' . $quickview_product_description['eg_produit_prix'] . ' TND</span>
 													</div>
 													';
@@ -568,7 +568,7 @@
 
 																echo '
 
-																<img src="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$produits_lies_img['eg_image_produit_nom'].'"
+																<img src="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/admin/upload_images/'.$produits_lies_img['eg_image_produit_nom'].'"
 																title="' . $produits_lies_img['eg_image_produit_title'] . '" class="img-responsive" />
 
 
@@ -600,7 +600,7 @@
 													<div class="right-block">
 													
 														<div class="caption">
-															<h4><a href="http://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
+															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/ExpertGaming/pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
 															<div class="ratings">
 																<div class="rating-box">
 																	<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i>
@@ -721,7 +721,7 @@
 							while ($verif_product = $PDO_query_verif_product->fetch()){
 
 									echo "
-											{src: 'http://".$_SERVER['SERVER_NAME']."/ExpertGaming/admin/upload_images/".$verif_product['eg_image_produit_nom']."' },
+											{src: 'https://".$_SERVER['SERVER_NAME']."/ExpertGaming/admin/upload_images/".$verif_product['eg_image_produit_nom']."' },
 										";
 
 							}

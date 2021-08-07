@@ -259,7 +259,7 @@
 													$quickview_marque = $PDO_query_quickview_marque->fetch();
 
 													echo'
-														<div class="brand"><span>Marque : </span><u><a href="http://'.$_SERVER['SERVER_NAME'].'/pages/products.php?marque_id='.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
+														<div class="brand"><span>Marque : </span><u><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?marque_id='.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
 													';
 													
 													$PDO_query_quickview_marque->closeCursor();
@@ -619,7 +619,7 @@
 													<div class="right-block">
 													
 														<div class="caption">
-															<h4><a href="http://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
+															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
 															<h5>Référence: ' . $produits_lies['eg_produit_reference'] . '</h5>  
 															<div class="ratings">
 																<div class="box-review form-group">

@@ -230,7 +230,7 @@ include("../config/fonction.php");
 																echo'
 																		<div class="right-block">
 																		<div class="caption">
-																			<h4><a href="http://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
+																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
 																			
 																			
 																			$text = wordwrap($produits['eg_produit_nom'], 80, "***", true); // insertion de marqueurs ***
