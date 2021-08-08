@@ -108,8 +108,8 @@
 											<div class="yt-content-slide yt-clearfix yt-content-wrap">
 												<div class="item">
 													<p class="des-member des-client">“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.”</p>
-													<h3 class="name-member">Jennifer lawrence</h3>
-													<p class="job-member">Co Founder</p>
+													<h3 class="name-member">NAME</h3>
+													<p class="job-member">FONCTION</p>
 												</div>
 											</div>
 										</div>	
