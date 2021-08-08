@@ -439,7 +439,7 @@
 																			</div>
 																		</div>
 																		<div class="accordion-content-right action">
-																			<span class="quantité">X'.$pack_produit['eg_pack_produit_quantite'].'</span>
+																			<span class="quantite">X'.$pack_produit['eg_pack_produit_quantite'].'</span>
 																		</div>
 																	</div>
 																</div>
