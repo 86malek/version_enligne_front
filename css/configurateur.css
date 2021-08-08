@@ -311,6 +311,19 @@ span[class^="ico-"].ico-18 {
 }
 /*=================================*/
 
+.quantite{
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #f7bb11;
+  border-radius: 100%;
+}
+
 /* .configurateur{
   display: block;
   width: 100%;

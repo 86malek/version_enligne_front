@@ -6599,6 +6599,13 @@ div.tab-slider .so-listing-tabs .owl2-controls .owl2-nav .owl2-next:hover {
   padding: 5px 10px;
 }
 
+@media (max-width: 470px) {
+  .tab-pane .accordion-content, .accordion-wrapper 
+  .accordion-content .accordion-content-left{
+    flex-direction: column;
+  }
+}
+
 /* Style the Image Used to Trigger the Modal */
 #myImg {
   border-radius: 5px;
