@@ -66,6 +66,7 @@
 							<div class="modcontent">
 								<ul class="menu">
 									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/A_propos_de_nous">À propos de nous</a></li>
+									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/Mention_legales">Mentions légales</a></li>
 								</ul>
 							</div>
 						</div>
