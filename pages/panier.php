@@ -156,7 +156,7 @@
 							</td>
 							<td class="text-left"><?php echo $item["ref"]; ?></td>
 							<td class="text-left" width="200px"><div class="input-group btn-block quantity">
-								<input type="text" name="quantity" id="<?php echo $item["code"].'-'.$item["ref"]; ?>" value="<?php echo $item["quantity"]; ?>" size="2" onBlur="saveCart(this);" class="form-control"/>
+								<input type="number" name="quantity" id="<?php echo $item["code"].'-'.$item["ref"]; ?>" value="<?php echo $item["quantity"]; ?>" size="2" onBlur="saveCart(this);" class="form-control"/>
 								<span class="input-group-btn">
 								<a href="panier.php?action=remove&code=<?php echo $item["code"].'-'.$item["ref"]; ?>" data-toggle="tooltip" title="Remove from Cart" class="btn btn-danger" data-original-title="Remove"><i class="fa fa-times-circle"></i></a>
 								</span></div></td>
