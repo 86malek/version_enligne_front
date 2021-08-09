@@ -102,10 +102,16 @@
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 shopping_cart pull-right">
 					<!--panier-->
 					<div class="btn-group btn-shopping-cart">
-						<a href="#" class="top_cart dropdown-toggle">
+						<a href="http://<?php echo $_SERVER['SERVER_NAME']?>/pages/panier.php" class="top_cart dropdown-toggle">
 							<div class="shopcart">
 								<span class="handle pull-left"><i class="bi bi-cart3"></i></span>
-								<!-- <span class="cart-counter">1</span> -->
+								<span class="cart-counter">
+										<?php $session_items = 0;
+											if(!empty($_SESSION["cart_item"])){
+												$session_items = count($_SESSION["cart_item"]);
+											}echo $session_items; 
+										?>
+								</span>
 							</div>
 						</a>
 					</div>

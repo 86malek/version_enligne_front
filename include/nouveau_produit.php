@@ -19,6 +19,7 @@
 
 											<div class="ltabs-item product-layout">
 												<div class="product-item-container">
+												<form method="post" action="index.php?action=add&code='.$produit_nouveau['eg_produit_id'].'">
 													<div class="left-block">
 										
 										';
@@ -148,12 +149,15 @@
 										if($produit_nouveau['eg_produit_dispo'] == 0){
 
 											echo'
+											
 											<button class="addToCart addToCart--notext" type="button"  disabled><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
-
+											
 										}else{
 
 											echo'
-											<button class="addToCart addToCart--notext" type="button"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											
+											<input type="hidden" name="quantity" value="1" size="2" />
+											<button class="addToCart addToCart--notext" type="submit" value="Add to cart"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										
@@ -162,6 +166,7 @@
 											<button class="compare" type="button"><i class="fa fa-exchange-alt"></i>  </button>
 										</div>
 									</div><!-- right block -->
+									</form>
 								</div>
 							</div>
 
