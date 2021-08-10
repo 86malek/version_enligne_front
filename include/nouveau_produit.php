@@ -157,7 +157,7 @@
 											<input type="hidden" name="hidden_name" id="name'.$produit_nouveau["eg_produit_id"].'" value="'.$produit_nouveau["eg_produit_nom"].'" />
              								<input type="hidden" name="hidden_price" id="price'.$produit_nouveau["eg_produit_id"].'" value="'.$produit_nouveau["eg_produit_prix"].'" />
 											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_nouveau["eg_produit_id"].'" class="form-control" value="1" />
-											<button class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produit_nouveau["eg_produit_id"].'" value="Add to Cart"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<button class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produit_nouveau["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										
