@@ -316,11 +316,6 @@
 		}
 		})
 		});
-		document.querySelector("input").addEventListener("keydown", function(event) {
-  if (event.which === 69) {
-    event.preventDefault();
-  }
-});	
 		});
 	</script>
 </body>
