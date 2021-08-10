@@ -9,14 +9,15 @@ $total_item = 0;
 
 $output = '
 <div class="table-responsive" id="order_table">
- <table class="table table-bordered table-striped">
-  <tr>  
-            <th width="40%">Product Name</th>  
-            <th width="10%">Quantity</th>  
-            <th width="20%">Price</th>  
-            <th width="15%">Total</th>  
-            <th width="5%">Action</th>  
-        </tr>
+<table class="table table-bordered table-striped">
+ 												
+  	<tr>  
+	  <td class="text-left">Nom</td>
+	  <td class="text-center">Qte</td>
+	  <td class="text-center">Prix</td>
+	  <td class="text-right">Total</td>
+	  <td class="text-right">Action</td> 
+	</tr>
 ';
 
 if(!empty($_SESSION["shopping_cart"]))
@@ -25,11 +26,11 @@ if(!empty($_SESSION["shopping_cart"]))
  {
   $output .= '
   <tr>
-   <td>'.$values["product_name"].'</td>
-   <td>'.$values["product_quantity"].'</td>
-   <td align="right">$ '.$values["product_price"].'</td>
-   <td align="right">$ '.number_format($values["product_quantity"] * $values["product_price"], 2).'</td>
-   <td><button name="delete" class="btn btn-danger btn-xs delete" id="'. $values["product_id"].'">Remove</button></td>
+  	<td class="text-left">'.$values["product_name"].'</td>
+	<td class="text-center">'.$values["product_quantity"].'</td>
+	<td class="text-center">'.$values["product_price"].' TND</td>
+	<td class="text-right">'.number_format($values["product_quantity"] * $values["product_price"], 3).' TND</td>
+	<td class="text-right"><button name="delete" class="btn btn-danger btn-xs delete" id="'. $values["product_id"].'">X</button></td>
   </tr>
   ';
   $total_price = $total_price + ($values["product_quantity"] * $values["product_price"]);
@@ -37,25 +38,34 @@ if(!empty($_SESSION["shopping_cart"]))
   $total_item = $total_item + 1;
  }
  $output .= '
- <tr>  
-        <td colspan="3" align="right">Total</td>  
-        <td align="right">$ '.number_format($total_price, 2).'</td>  
-        <td></td>  
-    </tr>
+ </table>
+ 	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td class="text-left"><strong>Total</strong>
+				</td>
+				<td class="text-right">'.number_format($total_price, 3).' TND</td>
+			</tr>
+		</tbody>
+	</table>
  ';
 }
 else
 {
  $output .= '
-    <tr>
-     <td colspan="5" align="center">
-      Your Cart is Empty!
-     </td>
-    </tr>
+ </table>
+ <table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td class="text-left"><strong>Total</strong>
+				</td>
+				<td class="text-right">0</td>
+			</tr>
+			</tbody>
+			</table>
     ';
 }
-$output .= '</table></div>';
-
+$output .= '</div>';
 $data = array(
  'cart_details'  => $output,
  'total_price'  => '$' . number_format($total_price, 2),
