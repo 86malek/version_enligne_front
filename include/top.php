@@ -30,7 +30,7 @@
 			<div class="row" style="display: flex; justify-content: center; align-items: center; align-content: center; flex-wrap: wrap;">
 				<!-- Logo -->
 				<div class="navbar-logo col-md-3 col-sm-12 col-xs-12">
-					<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/">
+					<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>">
 					<img src="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>image/logo/EXPERT_GAMING_logo.png" title="Expert Gaming" alt="Logo Expert Gaming" width="200">
 					</a>
 				</div>
@@ -97,26 +97,31 @@
 						
 				</div> -->
 				<!-- //Main Menu -->
-
+				<!--http://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/panier.php-->
 				<!-- Shopping Cart -->
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 shopping_cart pull-right">
 					<!--panier-->
 					<div class="btn-group btn-shopping-cart">
-						<a href="http://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/panier.php" class="top_cart dropdown-toggle">
+						<a id="cart-popover" class="top_cart dropdown-toggle" data-placement="bottom" title="Shopping Cart">
 							<div class="shopcart">
 								<span class="handle pull-left"><i class="bi bi-cart3"></i></span>
 								<span class="cart-counter">
-										<?php $session_items = 0;
-											if(!empty($_SESSION["cart_item"])){
-												$session_items = count($_SESSION["cart_item"]);
-											}echo $session_items; 
-										?>
 								</span>
 							</div>
 						</a>
 					</div>
 					<!--//panier-->
-
+					<div id="popover_content_wrapper" style="display: none">
+						<span id="cart_details"></span>
+						<div align="right">
+						<a href="order_process.php" class="btn btn-primary" id="check_out_cart">
+						<span class="glyphicon glyphicon-shopping-cart"></span> Check out
+						</a>
+						<a href="#" class="btn btn-default" id="clear_cart">
+						<span class="glyphicon glyphicon-trash"></span> Clear
+						</a>
+						</div>
+					</div>
 					<!--favoris-->
 					<div class="btn-group btn-shopping-cart">
 						<a href="#" class="top_cart dropdown-toggle">

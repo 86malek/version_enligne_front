@@ -19,7 +19,6 @@
 
 											<div class="ltabs-item product-layout">
 												<div class="product-item-container">
-												<form method="post" action="index.php?action=add&code='.$produit_nouveau['eg_produit_id'].'">
 													<div class="left-block">
 										
 										';
@@ -150,14 +149,15 @@
 
 											echo'
 											
-											<button class="addToCart addToCart--notext" type="button"  disabled><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<button class="addToCart addToCart--notext add_to_cart" type="button"  disabled><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 											
 										}else{
 
 											echo'
-											
-											<input type="hidden" name="quantity" value="1" size="2" />
-											<button class="addToCart addToCart--notext" type="submit" value="Add to cart"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<input type="hidden" name="hidden_name" id="name'.$produit_nouveau["eg_produit_id"].'" value="'.$produit_nouveau["eg_produit_nom"].'" />
+             								<input type="hidden" name="hidden_price" id="price'.$produit_nouveau["eg_produit_id"].'" value="'.$produit_nouveau["eg_produit_prix"].'" />
+											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_nouveau["eg_produit_id"].'" class="form-control" value="1" />
+											<button class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produit_nouveau["eg_produit_id"].'" value="Add to Cart"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										
@@ -166,7 +166,6 @@
 											<button class="compare" type="button"><i class="fa fa-exchange-alt"></i>  </button>
 										</div>
 									</div><!-- right block -->
-									</form>
 								</div>
 							</div>
 
