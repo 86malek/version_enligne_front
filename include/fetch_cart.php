@@ -10,14 +10,7 @@ $total_item = 0;
 $output = '
 <div class="table-responsive" id="order_table">
 <table class="table table-bordered table-striped">
- 												
-  	<tr>  
-	  <td class="text-left">Nom</td>
-	  <td class="text-center">Qte</td>
-	  <td class="text-center">Prix</td>
-	  <td class="text-right">Total</td>
-	  <td class="text-right">Action</td> 
-	</tr>
+
 ';
 
 if(!empty($_SESSION["shopping_cart"]))
@@ -26,9 +19,8 @@ if(!empty($_SESSION["shopping_cart"]))
  {
   $output .= '
   <tr>
-  	<td class="text-left">'.$values["product_name"].'</td>
+  	<td class="text-left"><a class="cart_product_name" href="product.html">'.$values["product_name"].'</a></td>
 	<td class="text-center">'.$values["product_quantity"].'</td>
-	<td class="text-center">'.$values["product_price"].' TND</td>
 	<td class="text-right">'.number_format($values["product_quantity"] * $values["product_price"], 3).' TND</td>
 	<td class="text-right"><button name="delete" class="btn btn-danger btn-xs delete" id="'. $values["product_id"].'">X</button></td>
   </tr>
