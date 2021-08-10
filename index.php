@@ -1,6 +1,38 @@
 <?php
+	session_start();
 	include("config/fonction.php");
-?> 
+
+	// To Add Product to Cart
+	if(!empty($_GET["action"]) && $_GET["action"] == "add") {
+		if(!empty($_POST["quantity"])) {
+					
+			$PDO_query_produit_panier = Bdd::connectBdd()->prepare("SELECT * FROM eg_produit WHERE eg_produit_id = :code AND eg_produit_statut = 1");
+			$PDO_query_produit_panier->bindParam(":code", $_GET["code"]);
+			$PDO_query_produit_panier->execute();					
+			while($productByCode_sql = $PDO_query_produit_panier->fetch(PDO::FETCH_ASSOC)) {
+				$resultset[] = $productByCode_sql;
+			}		
+			
+			$PDO_query_produit_panier->closeCursor();
+
+			$itemArray = array($resultset[0]["eg_produit_id"].'-'.$resultset[0]["eg_produit_reference"]=>array('ref'=>$resultset[0]["eg_produit_reference"], 'nom'=>$resultset[0]["eg_produit_nom"], 'code'=>$resultset[0]["eg_produit_id"], 'quantity'=>$_POST["quantity"], 'price'=>$resultset[0]["eg_produit_prix"]));
+			
+				if(!empty($_SESSION["cart_item"])) {
+					if(in_array($resultset[0]["eg_produit_id"],$_SESSION["cart_item"])) {
+						echo'eeeeeeeeee';
+						foreach($_SESSION["cart_item"] as $k => $v) {
+								if($resultset[0]["eg_produit_id"] == $k)
+									$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"];
+						}
+					} else {
+						$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+					}
+				} else {
+					$_SESSION["cart_item"] = $itemArray;
+				}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -186,7 +218,7 @@
 <script type="text/javascript" src="js/themejs/homepage.js"></script>
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script>
 		$(window).load(function() {
 			// Animate loader off screen
