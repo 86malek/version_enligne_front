@@ -54,48 +54,7 @@
                                         }
                                     $PDO_query_nouveau_pack->closeCursor();
                                     
-                            ?>                
-
-                               
-
-
-
-
-
-
-
-
-
-
-                                
-                                <!-- <div class="col-sm-4 col-xs-12 banner-item hidden-xs">
-                                    <div class="banners banner__img">
-                                        <div>
-                                            <a title="Static Image" href="#"><img src="image/produit/Pc_Gamer/Aercool_HIVE_ARGB_V2_SILVER.jpg" alt="Static Image"></a>
-                                        </div>
-                                    </div>
-                                    <div class="banner__info">
-                                        <h2>Pc Gamer Silver</h2>
-                                        <p>HIVE ARGB - Intel I3-10105F - Gigabyte GTX 1660 OC 6GB - 8Gb Ram RGB</p>
-                                        <a title="Shop Now" href="#">Voir plus &gt;&gt;</a>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="col-sm-4 col-xs-12 banner-item hidden-xs">
-                                    <div class="banners banner__img">
-                                        <div>
-                                            <a title="Static Image" href="#"><img src="image/produit/Pc_Gamer/Aercool_Quantum_ARGB_BRONZE.png" alt="Static Image"></a>
-                                        </div>
-                                    </div>
-                                    <div class="banner__info">
-                                        <h2>Pc Gamer Bronze</h2>
-                                        <p>Quantum ARGB - Ryzen 5 3400G - A320M-A Pro Max - 8Gb Ram RGB</p>
-                                        <a title="Shop Now" href="#">Voir plus &gt;&gt;</a>
-                                    </div>
-                                    
-                                </div> -->
-
+                            ?> 
                             </div>
                         </div>
                     </div>
