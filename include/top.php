@@ -105,8 +105,7 @@
 						<a data-loading-text="Loading..." class="top_cart dropdown-toggle" data-toggle="dropdown">
 							<div class="shopcart">
 								<span class="handle pull-left"><i class="bi bi-cart3"></i></span>
-								<span class="cart-counter">
-								</span>
+								<span class="cart-counter"></span>
 							</div>
 						</a>
 						
@@ -118,7 +117,7 @@
 									<div>										
 										<p class="text-right">
 										<a class="btn btn-sm" href="#" id="clear_cart"><i class="fa fa-shopping-cart"></i>Vider le panier</a>
-										<a class="btn btn-sm" href="#"><i class="fa fa-share"></i>Commander</a> </p>
+										<a class="btn btn-sm" href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/info_commande.php"><i class="fa fa-share"></i>Commander</a> </p>
 									</div>
 								</li>
 							</ul>

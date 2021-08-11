@@ -2,36 +2,6 @@
 	session_start();
 	include("config/fonction.php");
 
-	// To Add Product to Cart
-	if(!empty($_GET["action"]) && $_GET["action"] == "add") {
-		if(!empty($_POST["quantity"])) {
-					
-			$PDO_query_produit_panier = Bdd::connectBdd()->prepare("SELECT * FROM eg_produit WHERE eg_produit_id = :code AND eg_produit_statut = 1");
-			$PDO_query_produit_panier->bindParam(":code", $_GET["code"]);
-			$PDO_query_produit_panier->execute();					
-			while($productByCode_sql = $PDO_query_produit_panier->fetch(PDO::FETCH_ASSOC)) {
-				$resultset[] = $productByCode_sql;
-			}		
-			
-			$PDO_query_produit_panier->closeCursor();
-
-			$itemArray = array($resultset[0]["eg_produit_id"].'-'.$resultset[0]["eg_produit_reference"]=>array('ref'=>$resultset[0]["eg_produit_reference"], 'nom'=>$resultset[0]["eg_produit_nom"], 'code'=>$resultset[0]["eg_produit_id"], 'quantity'=>$_POST["quantity"], 'price'=>$resultset[0]["eg_produit_prix"]));
-			
-				if(!empty($_SESSION["cart_item"])) {
-					if(in_array($resultset[0]["eg_produit_id"],$_SESSION["cart_item"])) {
-						echo'eeeeeeeeee';
-						foreach($_SESSION["cart_item"] as $k => $v) {
-								if($resultset[0]["eg_produit_id"] == $k)
-									$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"];
-						}
-					} else {
-						$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-					}
-				} else {
-					$_SESSION["cart_item"] = $itemArray;
-				}
-		}
-	}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -82,13 +52,6 @@
 	<link id="color_scheme" href="css/home4.css" rel="stylesheet">
 	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
-	<style>
-	.popover
-	{
-		width: 100%;
-		max-width: 800px;
-	}
-	</style>
 	
 	<style>
 	.no-js #loader { display: none;  }
@@ -224,10 +187,6 @@
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script>	
-
-	/* ---------------------------------------------------
-		jGrowl – jQuery alerts and message box
-	-------------------------------------------------- */
 	
 		$(window).load(function() {
 			// Animate loader off screen
@@ -236,106 +195,106 @@
 		$(document).ready(function(){
 
 
-		load_cart_data();
+			load_cart_data();
 
-		function load_cart_data()
-		{
-		$.ajax({
-		url:"include/fetch_cart.php",
-		method:"POST",
-		dataType:"json",
-		success:function(data)
-		{
-			$('#cart_details').html(data.cart_details);
-			$('.total_price').text(data.total_price);
-			$('.cart-counter').text(data.total_item);
-		}
-		})
-		}
-
-		$('#cart-popover').popover({
-		html : true,
-		container : 'body',
-		content:function(){
-		return $('#popover_content_wrapper').html();
-		}
-		});
-		$(document).on('click', '.add_to_cart', function(){
-		var product_id = $(this).attr('id');
-		var product_name = $('#name'+product_id+'').val();
-		var product_price = $('#price'+product_id+'').val();
-		var product_quantity = $('#quantity'+product_id).val();
-		var action = 'add';
-		if(product_quantity > 0)
-		{
-		$.ajax({
-			url:"include/action.php",
+			function load_cart_data()
+			{
+			$.ajax({
+			url:"include/fetch_cart.php",
 			method:"POST",
-			data:{product_id:product_id, product_name:product_name, product_price:product_price, product_quantity:product_quantity, action:action},
+			dataType:"json",
 			success:function(data)
 			{
-			load_cart_data();
-				
-			addProductNotice(''+product_name+'', '','<p>est ajouter au panier</p>', 'success');
-				
+				$('#cart_details').html(data.cart_details);
+				$('.total_price').text(data.total_price);
+				$('.cart-counter').text(data.total_item);
 			}
-		})
-		}
-		else
-		{
-			addProductNotice('Notification', '','<h3>Votre produit est ajouter au panier</h3>', 'danger');
-		}
-		});
-		$(document).on('click', '.delete', function(){
-		var product_id = $(this).attr('id');
-		var action = 'remove';
-		if(confirm("Are you sure you want to remove this product?"))
-		{
-		$.ajax({
+			})
+			}
+
+			$('#cart-popover').popover({
+			html : true,
+			container : 'body',
+			content:function(){
+			return $('#popover_content_wrapper').html();
+			}
+			});
+			$(document).on('click', '.add_to_cart', function(){
+			var product_id = $(this).attr('id');
+			var product_name = $('#name'+product_id+'').val();
+			var product_price = $('#price'+product_id+'').val();
+			var product_quantity = $('#quantity'+product_id).val();
+			var action = 'add';
+			if(product_quantity > 0)
+			{
+			$.ajax({
+				url:"include/action.php",
+				method:"POST",
+				data:{product_id:product_id, product_name:product_name, product_price:product_price, product_quantity:product_quantity, action:action},
+				success:function(data)
+				{
+				load_cart_data();
+					
+				addProductNotice(''+product_name+'', '','<p>est ajouter au panier</p>', 'success');
+					
+				}
+			})
+			}
+			else
+			{
+				addProductNotice('Notification', '','<h3>Votre produit est ajouter au panier</h3>', 'danger');
+			}
+			});
+			$(document).on('click', '.delete', function(){
+			var product_id = $(this).attr('id');
+			var action = 'remove';
+			if(confirm("Are you sure you want to remove this product?"))
+			{
+			$.ajax({
+				url:"include/action.php",
+				method:"POST",
+				data:{product_id:product_id, action:action},
+				success:function(data)
+				{
+				load_cart_data();
+				//$('#cart-popover').popover('hide');
+				addProductNotice('Notification', '','<h3>Le produit est effacer de votre panier</h3>', 'danger');
+				}
+			})
+			}
+			else
+			{
+			return false;
+			}
+			});
+
+			$(document).on('click', '#clear_cart', function(){
+			var action = 'empty';
+			$.ajax({
 			url:"include/action.php",
 			method:"POST",
-			data:{product_id:product_id, action:action},
-			success:function(data)
+			data:{action:action},
+			success:function()
 			{
-			load_cart_data();
-			//$('#cart-popover').popover('hide');
-			addProductNotice('Notification', '','<h3>Le produit est effacer de votre panier</h3>', 'danger');
+				load_cart_data();
+				//$('#cart-popover').popover('hide');
+				addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
 			}
-		})
-		}
-		else
-		{
-		return false;
-		}
-		});
-
-		$(document).on('click', '#clear_cart', function(){
-		var action = 'empty';
-		$.ajax({
-		url:"include/action.php",
-		method:"POST",
-		data:{action:action},
-		success:function()
-		{
-			load_cart_data();
-			//$('#cart-popover').popover('hide');
-			addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
-		}
-		})
-		});
-		});
-		function addProductNotice(title, thumb, text, type) {
-		$.jGrowl.defaults.closer = false;
-		//Stop jGrowl
-		//$.jGrowl.defaults.sticky = true;
-		var tpl = '<h3>'+text+'</h3>';
-		$.jGrowl(tpl, {		
-			life: 4000,
-			header: title,
-			speed: 'slow',
-			theme: type
-		});
-	}
+			})
+			});
+			});
+			function addProductNotice(title, thumb, text, type) {
+				$.jGrowl.defaults.closer = false;
+				//Stop jGrowl
+				//$.jGrowl.defaults.sticky = true;
+				var tpl = '<h3>'+text+'</h3>';
+				$.jGrowl(tpl, {		
+					life: 4000,
+					header: title,
+					speed: 'slow',
+					theme: type
+				});
+			}
 	</script>
 </body>
 </html>
