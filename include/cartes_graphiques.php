@@ -32,7 +32,7 @@
 										echo '
 
 										<div class="product-image-container lazy second_img">
-										<img data-src="admin/upload_images/' . $cartes_graphiques_image['eg_image_produit_nom'] . '" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="' . $cartes_graphiques_image['eg_image_produit_title'] . '" class="img-responsive">
+										<img data-src="https://betatest.expert-gaming.tn' . $cartes_graphiques_image['eg_image_produit_nom'] . '" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="' . $cartes_graphiques_image['eg_image_produit_title'] . '" class="img-responsive">
 									</div>
 										';
 
@@ -49,7 +49,7 @@
 										}
 										echo '
 										<!--full quick view block-->
-										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'/pages/quickview.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">Aperçu rapide</a>
+										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/quickview.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">Aperçu rapide</a>
 										<!--end full quick view block-->
 									</div>
 									<div class="right-block">
