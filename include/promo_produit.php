@@ -143,7 +143,7 @@
 
 											echo'
 											<input type="hidden" name="hidden_name" id="name'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_nom"].'" />
-             								<input type="hidden" name="hidden_price" id="price'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_prix"].'" />
+             								<input type="hidden" name="hidden_price" id="price'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_promo"].'" />
 											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_promo["eg_produit_id"].'" class="form-control" value="1" />
 											<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produit_promo["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 

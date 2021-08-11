@@ -10,12 +10,12 @@ session_start();
 	$order_details = '
 	<div class="table-responsive" id="order_table">
 	 <table class="table table-bordered table-striped">
-	  <tr>  
-				<th>Nom du produit</th>  
-				<th>Quantité</th>  
-				<th>Prix</th>  
-				<th>Total</th>  
-			</tr>
+	  	<tr>  
+			<th>Nom du produit</th>  
+			<th>Quantité</th>  
+			<th>Prix</th>  
+			<th>Total</th>  
+		</tr>
 	';
 	
 	if(!empty($_SESSION["shopping_cart"]))
@@ -41,6 +41,13 @@ session_start();
 			<td align="right">'.number_format($total_price, 3).' TND</td>
 		</tr>
 	 ';
+	}else{
+		$order_details .= '
+		<tr>  
+			   <td colspan="4" align="center">Votre panier est vide</td>  
+		   </tr>
+		';
+
 	}
 	$order_details .= '</table></div>';
 	
@@ -75,7 +82,7 @@ session_start();
 	
     <!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
 	
 	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -123,8 +130,16 @@ session_start();
 			<div class="row">
 				<!--Middle Part Start-->
 				<div id="content" class="col-sm-12">
-						<h2 class="title">Ma dernière commande</h2>
-  						<span id="message"></span>
+						<?php 
+						if(!empty($_SESSION["success_message"])){
+						?>
+							<div class="alert alert-success"><?php echo $_SESSION["success_message"]; ?></div>
+						<?php
+						}
+						?>
+
+						  
+
 						<div class="panel panel-default">
 							<div class="panel-heading">Processus de commande</div>
 							<div class="panel-body">
@@ -156,14 +171,14 @@ session_start();
 												</div>
 												<div class="col-sm-6">
 													<label><b>Code postal *</b></label>
-													<input type="text" name="postal" id="postal" class="form-control" value="" required/>
+													<input type="number" onKeyPress="if(this.value.length==4) return false;" onkeydown="return event.keyCode !== 69" name="postal" id="postal" class="form-control" value="" required/>
 													<span id="error_postal" class="text-danger"></span>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-sm-12">
 													<label><b>Téléphone * :</b></label>
-													<input type="text" name="tel" id="tel" class="form-control" value="" required/>
+													<input type="number" name="tel" id="tel" onKeyPress="if(this.value.length==8) return false;" onkeydown="return event.keyCode !== 69" class="form-control" value="" required/>
 													<span id="error_tel" class="text-danger"></span>
 												</div>
 											</div>
@@ -171,20 +186,22 @@ session_start();
 											<h4>Details du paiement</h4>
 											<div class="row">
 												<div class="col-md-12">
-													<label>Choisir votre type de paiement</label>
-													<select name="" class="form-control"  required>
-													<option value="">Par chéque</option>
-													<option value="">Par chéque</option>
-														<option value="">Par chéque</option>
+													<label>Choisir votre type de paiement (Tous paiemùent par chéque )</label>
+													<select name="commande" class="form-control"  required>
+													<option value="">Selectionnez votre type de paiement</option>
+														<option value="Paiement en espèce">Paiement en espèce</option>
 													</select>
 												</div>
 											</div>
 											<br />
+											<hr />
 											<div>
 												<input type="hidden" name="total_amount" value="<?php echo $total_price; ?>" />
 												<input type="hidden" name="item_details" value="<?php echo $item_details; ?>" />
-												<input type="button" name="button_action" id="button_action" class="btn btn-success btn-sm" value="Pay Now" />
+												<button type="submit" name="button_action" id="button_action" class="btn btn-success btn-lg" value="Valider votre commande">Valider votre commande</button>
 											</div>
+											<hr />
+											<small>Informations : <br> Une fois votre commande validée un commercial vous contactera pour la suite.</small>
 										</div>
 										<div class="col-md-6">
 											<h4>Détails de la commande</h4>
@@ -234,7 +251,6 @@ session_start();
 	
 	<script>
 
-		 
 		$(document).ready(function(){
 
 
@@ -256,17 +272,17 @@ session_start();
 			}
 
 			$('#cart-popover').popover({
-			html : true,
-			container : 'body',
-			content:function(){
-			return $('#popover_content_wrapper').html();
-			}
+				html : true,
+				container : 'body',
+					content:function(){
+					return $('#popover_content_wrapper').html();
+					}
 			});
 
 			$(document).on('click', '#clear_cart', function(){
 				var action = 'empty';
 				$.ajax({
-				url:"include/action.php",
+				url:"../include/action.php",
 				method:"POST",
 				data:{action:action},
 				success:function()
@@ -274,6 +290,7 @@ session_start();
 					load_cart_data();
 					//$('#cart-popover').popover('hide');
 					addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
+					location.reload(true);
 				}
 				})
 			});
@@ -292,40 +309,8 @@ session_start();
 				});
 			}
 
-		function validate_form()
-			{
-			var valid_card = 0;
-			var valid = true;
-			var email_address = $('#email_address').val();
-			var customer_name = $('#customer_name').val();
-			var customer_address = $('#customer_address').val();
 
-			
-
-
-
-
-
-			if(customer_address == '')
-			{
-			$('#customer_address').addClass('require');
-			$('#error_customer_address').text('Enter Address Detail');
-			valid = false;
-			}
-			else
-			{
-			$('#customer_address').removeClass('require');
-			$('#error_customer_address').text('');
-			valid = true;
-			} 
-
-			
-
-			return valid;
-		}
-
-
-	<script>
+	</script>
 
 </body>
 
