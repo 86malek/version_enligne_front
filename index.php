@@ -223,7 +223,12 @@
 <script type="text/javascript" src="js/themejs/homepage.js"></script>
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-	<script>
+	<script>	
+
+	/* ---------------------------------------------------
+		jGrowl – jQuery alerts and message box
+	-------------------------------------------------- */
+	
 		$(window).load(function() {
 			// Animate loader off screen
 			$(".se-pre-con").fadeOut("slow");;
@@ -270,13 +275,15 @@
 			success:function(data)
 			{
 			load_cart_data();
-			alert("Item has been Added into Cart");
+				
+			addProductNotice(''+product_name+'', '','<p>est ajouter au panier</p>', 'success');
+				
 			}
 		})
 		}
 		else
 		{
-		alert("Please Enter Number of Quantity");
+			addProductNotice('Notification', '','<h3>Votre produit est ajouter au panier</h3>', 'danger');
 		}
 		});
 		$(document).on('click', '.delete', function(){
@@ -291,8 +298,8 @@
 			success:function(data)
 			{
 			load_cart_data();
-			$('#cart-popover').popover('hide');
-			alert("Item has been removed from Cart");
+			//$('#cart-popover').popover('hide');
+			addProductNotice('Notification', '','<h3>Le produit est effacer de votre panier</h3>', 'danger');
 			}
 		})
 		}
@@ -311,12 +318,24 @@
 		success:function()
 		{
 			load_cart_data();
-			$('#cart-popover').popover('hide');
-			alert("Your Cart has been clear");
+			//$('#cart-popover').popover('hide');
+			addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
 		}
 		})
 		});
 		});
+		function addProductNotice(title, thumb, text, type) {
+		$.jGrowl.defaults.closer = false;
+		//Stop jGrowl
+		//$.jGrowl.defaults.sticky = true;
+		var tpl = '<h3>'+text+'</h3>';
+		$.jGrowl(tpl, {		
+			life: 4000,
+			header: title,
+			speed: 'slow',
+			theme: type
+		});
+	}
 	</script>
 </body>
 </html>
