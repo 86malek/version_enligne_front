@@ -3422,6 +3422,11 @@ input[type="color"].form-control {
   border-radius: 0;
 }
 
+input[type="number"].form-control {
+  margin-bottom: 10px;
+} 
+
+
 .input-group .input-group-addon {
   font-size: 12px;
   height: 30px;
@@ -4588,7 +4593,7 @@ div.tab-slider
   border: 1px solid #ddd;
   height: 38px;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 11px;
   vertical-align: top;
 }
 .products-list .product-layout .button-group .wishlist:hover,
@@ -6597,6 +6602,13 @@ div.tab-slider .so-listing-tabs .owl2-controls .owl2-nav .owl2-next:hover {
   border: 1px solid #e6e6e6;
   margin-bottom: 10px;
   padding: 5px 10px;
+}
+
+@media (max-width: 470px) {
+  .tab-pane .accordion-content, .accordion-wrapper 
+  .accordion-content .accordion-content-left{
+    flex-direction: column;
+  }
 }
 
 /* Style the Image Used to Trigger the Modal */

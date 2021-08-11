@@ -30,15 +30,15 @@
 			<div class="row" style="display: flex; justify-content: center; align-items: center; align-content: center; flex-wrap: wrap;">
 				<!-- Logo -->
 				<div class="navbar-logo col-md-3 col-sm-12 col-xs-12">
-					<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/">
-					<img src="https://<?php echo $_SERVER['SERVER_NAME']?>/image/logo/EXPERT_GAMING_logo.png" title="Expert Gaming" alt="Logo Expert Gaming" width="200">
+					<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>">
+					<img src="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>image/logo/EXPERT_GAMING_logo.png" title="Expert Gaming" alt="Logo Expert Gaming" width="200">
 					</a>
 				</div>
 				<!-- //end Logo -->
 				
 				<!-- Search -->
 				<div id="sosearchpro" class="col-md-7 col-sm-7 search-pro">
-					<form method="POST" action="//<?php echo $_SERVER['SERVER_NAME']?>/pages/recherche.php">
+					<form method="POST" action="//<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/recherche.php">
 						<div id="search0" class="search input-group">
 							<div class="select_category filter_type icon-select">
 								<select class="no-border" name="categorieid">
@@ -97,20 +97,46 @@
 						
 				</div> -->
 				<!-- //Main Menu -->
-
+				<!--http://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/panier.php-->
 				<!-- Shopping Cart -->
 					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 shopping_cart pull-right">
 					<!--panier-->
 					<div class="btn-group btn-shopping-cart">
-						<a href="#" class="top_cart dropdown-toggle">
+						<a data-loading-text="Loading..." class="top_cart dropdown-toggle" data-toggle="dropdown">
 							<div class="shopcart">
 								<span class="handle pull-left"><i class="bi bi-cart3"></i></span>
-								<!-- <span class="cart-counter">1</span> -->
+								<span class="cart-counter"></span>
 							</div>
 						</a>
-					</div>
-					<!--//panier-->
+						
+						<ul class="tab-content content dropdown-menu pull-right shoppingcart-box" role="menu">
+								<li>
+								<span id="cart_details"></span>									
+								</li>
+								<li>
+									<div>										
+										<p class="text-right">								
+											<a class="btn btn-sm" href="#" id="clear_cart"><i class="fa fa-shopping-cart"></i>Vider le panier</a>
+											<a class="btn btn-sm" href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/info_commande.php"><i class="fa fa-share"></i>Commander</a>
+										</p>
 
+									</div>
+								</li>
+								<li>
+								<?php 
+						if(!empty($_SESSION["success_message"])){
+						?>
+							<div class="alert alert-success text-center"><?php echo $_SESSION["success_message"]; ?></div>
+						<?php
+						}
+						?>
+</li>
+								
+							</ul>
+							
+					</div>
+					
+					<!--//panier-->
 					<!--favoris-->
 					<div class="btn-group btn-shopping-cart">
 						<a href="#" class="top_cart dropdown-toggle">
@@ -189,7 +215,7 @@
 																	
 
 															<li class="">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -201,7 +227,7 @@
 																	
 
 															<li class="">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -213,7 +239,7 @@
 															
 															echo '
 
-															<img class="label-hot" src="https://'.$_SERVER['SERVER_NAME'].'/image/theme/icons/hot-icon.png" alt="icon items">
+															<img class="label-hot" src="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'image/theme/icons/hot-icon.png" alt="icon items">
 
 															';
 
@@ -231,7 +257,7 @@
 
 															<li class="with-sub-menu hover">
 															<p class="close-menu"></p>
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -241,7 +267,7 @@
 															
 															echo '
 
-															<img class="label-hot" src="https://'.$_SERVER['SERVER_NAME'].'/image/theme/icons/hot-icon.png" alt="icon items">
+															<img class="label-hot" src="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'image/theme/icons/hot-icon.png" alt="icon items">
 
 															';
 
@@ -278,7 +304,7 @@
 																		<div class="col-md-3">
 																			<div class="column">
 
-																				<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?cat_id='.$categorie['eg_categorie_id'].'" class="title-submenu">'.$categorie['eg_categorie_nom'].'</a>
+																				<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?cat_id='.$categorie['eg_categorie_id'].'" class="title-submenu">'.$categorie['eg_categorie_nom'].'</a>
 
 																				<div>
 																					<ul class="row-list">
@@ -297,7 +323,7 @@
 																echo '
 																						<li>
 																						
-																						<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?sous_cat_id='.$sous_categorie['eg_sous_categorie_id'].'">'.$sous_categorie['eg_sous_categorie_nom'].'</a>
+																						<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?sous_cat_id='.$sous_categorie['eg_sous_categorie_id'].'">'.$sous_categorie['eg_sous_categorie_nom'].'</a>
 
 																						</li>
 
@@ -340,7 +366,7 @@
 													
 													<li class="hidden-md">
 														<p class="close-menu"></p>
-														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/pages/promo.php" class="clearfix">
+														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php" class="clearfix">
 															<strong>Promotions</strong>
 															
 														</a>
@@ -348,7 +374,7 @@
 													
 													<li class="pull-right">
 														<a href="Configurateur"><strong>configurateur</strong>
-															<!-- <img class="label-hot" src="https://<?php echo $_SERVER['SERVER_NAME']?>/image/theme/icons/hot-icon.png" alt="icon items"> -->
+															<!-- <img class="label-hot" src="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>image/theme/icons/hot-icon.png" alt="icon items"> -->
 															<span class="tooltips"><strong>Coming soon</strong></span>
 														</a>
 													</li>

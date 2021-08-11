@@ -1,6 +1,8 @@
 <?php
+	session_start();
 	include("config/fonction.php");
-?> 
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,12 +34,11 @@
 	
     <!-- Libs CSS
 	============================================ -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
 	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="css/themecss/lib.css" rel="stylesheet">
-	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	
 	<!-- Theme CSS
@@ -51,7 +52,6 @@
 	<link id="color_scheme" href="css/home4.css" rel="stylesheet">
 	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
-	
 	
 	<style>
 	.no-js #loader { display: none;  }
@@ -185,14 +185,116 @@
 <script type="text/javascript" src="js/themejs/application.js"></script>
 <script type="text/javascript" src="js/themejs/homepage.js"></script>
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-	<script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script>	
+	
 		$(window).load(function() {
 			// Animate loader off screen
 			$(".se-pre-con").fadeOut("slow");;
-		});
-	</script>
+		});  
+		$(document).ready(function(){
 
+
+			load_cart_data();
+
+			function load_cart_data()
+			{
+			$.ajax({
+			url:"include/fetch_cart.php",
+			method:"POST",
+			dataType:"json",
+			success:function(data)
+			{
+				$('#cart_details').html(data.cart_details);
+				$('.total_price').text(data.total_price);
+				$('.cart-counter').text(data.total_item);
+			}
+			})
+			}
+
+			$('#cart-popover').popover({
+			html : true,
+			container : 'body',
+			content:function(){
+			return $('#popover_content_wrapper').html();
+			}
+			});
+			$(document).on('click', '.add_to_cart', function(){
+			var product_id = $(this).attr('id');
+			var product_name = $('#name'+product_id+'').val();
+			var product_price = $('#price'+product_id+'').val();
+			var product_quantity = $('#quantity'+product_id).val();
+			var action = 'add';
+			if(product_quantity > 0)
+			{
+			$.ajax({
+				url:"include/action.php",
+				method:"POST",
+				data:{product_id:product_id, product_name:product_name, product_price:product_price, product_quantity:product_quantity, action:action},
+				success:function(data)
+				{
+				load_cart_data();
+					
+				addProductNotice(''+product_name+'', '','<p>est ajouter au panier</p>', 'success');
+					
+				}
+			})
+			}
+			else
+			{
+				addProductNotice('Notification', '','<h3>Votre produit est ajouter au panier</h3>', 'danger');
+			}
+			});
+			$(document).on('click', '.delete', function(){
+			var product_id = $(this).attr('id');
+			var action = 'remove';
+			if(confirm("Are you sure you want to remove this product?"))
+			{
+			$.ajax({
+				url:"include/action.php",
+				method:"POST",
+				data:{product_id:product_id, action:action},
+				success:function(data)
+				{
+				load_cart_data();
+				//$('#cart-popover').popover('hide');
+				addProductNotice('Notification', '','<h3>Le produit est effacer de votre panier</h3>', 'danger');
+				}
+			})
+			}
+			else
+			{
+			return false;
+			}
+			});
+
+			$(document).on('click', '#clear_cart', function(){
+			var action = 'empty';
+			$.ajax({
+			url:"include/action.php",
+			method:"POST",
+			data:{action:action},
+			success:function()
+			{
+				load_cart_data();
+				//$('#cart-popover').popover('hide');
+				addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
+			}
+			})
+			});
+			});
+			function addProductNotice(title, thumb, text, type) {
+				$.jGrowl.defaults.closer = false;
+				//Stop jGrowl
+				//$.jGrowl.defaults.sticky = true;
+				var tpl = '<h3>'+text+'</h3>';
+				$.jGrowl(tpl, {		
+					life: 4000,
+					header: title,
+					speed: 'slow',
+					theme: type
+				});
+			}
+	</script>
 </body>
 </html>
