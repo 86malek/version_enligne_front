@@ -66,7 +66,7 @@
 							<div class="modcontent">
 								<ul class="menu">
 									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>A_propos_de_nous">À propos de nous</a></li>
-									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Mention_legales">Mentions légales</a></li>
+									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Mentions_legales">Mentions légales</a></li>
 								</ul>
 							</div>
 						</div>
