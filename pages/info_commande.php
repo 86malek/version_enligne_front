@@ -248,69 +248,6 @@ session_start();
 	<script type="text/javascript" src="../js/themejs/application.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-	
-	<script>
-
-		$(document).ready(function(){
-
-
-			load_cart_data();
-
-			function load_cart_data()
-			{
-			$.ajax({
-			url:"../include/fetch_cart.php",
-			method:"POST",
-			dataType:"json",
-			success:function(data)
-			{
-				$('#cart_details').html(data.cart_details);
-				$('.total_price').text(data.total_price);
-				$('.cart-counter').text(data.total_item);
-			}
-			})
-			}
-
-			$('#cart-popover').popover({
-				html : true,
-				container : 'body',
-					content:function(){
-					return $('#popover_content_wrapper').html();
-					}
-			});
-
-			$(document).on('click', '#clear_cart', function(){
-				var action = 'empty';
-				$.ajax({
-				url:"../include/action.php",
-				method:"POST",
-				data:{action:action},
-				success:function()
-				{
-					load_cart_data();
-					//$('#cart-popover').popover('hide');
-					addProductNotice('Notification', '','<h3>Votre panier est de nouveau vide</h3>', 'danger');
-					location.reload(true);
-				}
-				})
-			});
-			});
-
-			function addProductNotice(title, thumb, text, type) {
-				$.jGrowl.defaults.closer = false;
-				//Stop jGrowl
-				//$.jGrowl.defaults.sticky = true;
-				var tpl = '<h3>'+text+'</h3>';
-				$.jGrowl(tpl, {		
-					life: 4000,
-					header: title,
-					speed: 'slow',
-					theme: type
-				});
-			}
-
-
-	</script>
 
 </body>
 
