@@ -131,6 +131,14 @@
 								
 							?>
 							<!-- End Section module so-extraslider -->
+
+
+							<?php
+
+								include("include/cartes_graphiques.php");
+
+							?>
+
 								
 							<!-- Section Ambassadeurs -->
 							<?php

@@ -2144,11 +2144,19 @@
 				
 																	';
 				
-																}else{
-				
+																}elseif($produits['eg_produit_dispo'] == 3){
+	
 																	echo'
 																	
 																	<div class="stock"><span class="status-commande">Sur commande</span></div>
+				
+																	';
+				
+																}elseif($produits['eg_produit_dispo'] == 4){
+				
+																	echo'
+																	
+																	<div class="stock"><span class="status-soon">En arrivage</span></div>
 				
 																	';
 				
