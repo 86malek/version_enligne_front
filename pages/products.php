@@ -2167,7 +2167,7 @@ include("../config/fonction.php");
 				
 																}
 																
-																	if($produits['eg_produit_promo'] == 0){
+																if($produits['eg_produit_promo'] == 0){
 
 																echo '
 																	<div class="price">
@@ -2188,9 +2188,9 @@ include("../config/fonction.php");
 																}
 																echo'
 																					
-																				<div class="description item-desc hidden">
-																					<p>' . $produits['eg_produit_description'] . '</p>
-																				</div>
+																		<div class="description item-desc hidden">
+																			<p>' . $produits['eg_produit_description'] . '</p>
+																		</div>
 																		</div>
 																		
 																		<div class="button-group">
@@ -2200,11 +2200,14 @@ include("../config/fonction.php");
 														if($produits['eg_produit_dispo'] == 0){
 
 															echo'
-																			<button class="addToCart" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible" disabled><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
+															<button class="addToCart addToCart--notext" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible"  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span>/button>
 															';
 														}else{
 															echo'
-															<button class="addToCart" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
+															<input type="hidden" name="hidden_name" id="name'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_nom"].'" />
+															<input type="hidden" name="hidden_price" id="price'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_prix"].'" />
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control" value="1" />
+															<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 															
 															';
 														}
@@ -2314,7 +2317,6 @@ include("../config/fonction.php");
 	<script type="text/javascript" src="../js/themejs/application.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
-	<script type="text/javascript" src="../js/themejs/addtocart.js"></script>
 	<script>
 		// Check if Cookie exists
 		if ($.cookie('display')) {
