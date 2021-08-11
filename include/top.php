@@ -190,7 +190,7 @@
 											<div class="container">
 												<ul class="megamenu " data-transition="slide" data-animationtime="250">
 													<li class="home">
-														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>">Accueil</a>
+														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>">Accueil</a>
 													</li>
 													<?php
 
