@@ -3,7 +3,7 @@
 	<div id="so_extraslider1">
 		
 		<!-- Begin extraslider-inner -->
-		<div class="so-extraslider products-list grid"  data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="25" data-items_column0="5" data-items_column1="4" data-items_column2="3"  data-items_column3="2" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
+		<div class="so-extraslider products-list grid"  data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="25" data-items_column0="4" data-items_column1="4" data-items_column2="3"  data-items_column3="2" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
 		
 			<!--Begin Items-->
 
@@ -135,18 +135,22 @@
 										if($produit_promo['eg_produit_dispo'] == 0){
 
 											echo'
-											<button class="addToCart addToCart--notext" type="button" disabled><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											
+											<input type="number" id="" class="form-control" value="1" disabled/>
+											<button class="addToCart add_to_cart" type="button"  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>';
 
 										}else{
 
 											echo'
-											<button class="addToCart addToCart--notext" type="button"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<input type="hidden" name="hidden_name" id="name'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_nom"].'" />
+             								<input type="hidden" name="hidden_price" id="price'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_prix"].'" />
+											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_promo["eg_produit_id"].'" class="form-control" value="1" />
+											<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produit_promo["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										
 										echo'
 
-											<button class="addToCart addToCart--notext" type="button"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 											<button class="wishlist" type="button" ><i class="fa fa-heart"></i>  </button>
 											<button class="compare" type="button" ><i class="fa fa-exchange-alt"></i>  </button>
 										</div>

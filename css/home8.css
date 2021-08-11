@@ -5908,6 +5908,7 @@ body {
 }
 .home8--banner1 .banner__info p {
   margin-bottom: 20px;
+  min-height: 65px;
 }
 
 .home8--banner2 {
@@ -5941,7 +5942,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   color: #222;
-  font-size: 183.33%;
+  font-size: 120.33%;
   margin: 0 0 15px;
 }
 .home8--banner3 .banner__info > a {

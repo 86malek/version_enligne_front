@@ -34,7 +34,7 @@
 	
     <!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
 	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -169,7 +169,7 @@
 ============================================ -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="js/themejs/libs.js"></script>
 <script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
