@@ -202,12 +202,12 @@
 	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
 
-
 	<!-- Theme files
-============================================ -->
+	============================================ -->
 	<script type="text/javascript" src="js/themejs/application.js"></script>
 	<script type="text/javascript" src="js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 
 </body>

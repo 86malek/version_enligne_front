@@ -49,7 +49,6 @@
 	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
 	<link href="../css/responsive.css" rel="stylesheet">
 	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
-	<link href="../css/responsive.css" rel="stylesheet">
 	<link href="../css/configurateur.css" rel="stylesheet">
 
 
@@ -291,10 +290,16 @@
 														if($quickview_product_description['eg_produit_dispo'] == 0){
 
 															echo'
-															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
-															<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
+															<div class="option quantity">
+																<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+																	<label>Qt<sup>é</sup> </label>
+																	<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$quickview_product_description["eg_produit_id"].'" class="form-control" value="1"/>
+																	<span class="input-group-addon product_quantity_down">− </span>
+																	<span class="input-group-addon product_quantity_up">+ </span>
+																</div>
+															</div>
 															<div class="cart">
-															<input type="button" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Ajouter au panier" disabled="disabled" />
+															<button class="add_to_cart btn btn-mega btn-lg panier_details" type="button" name="add_to_cart" id="'.$quickview_product_description["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." disabled="disabled"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 															</div>
 
 															';
