@@ -26,30 +26,30 @@
 
 	<!-- font awesome
 	============================================ -->
-	<link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="css/themecss/lib.css" rel="stylesheet">
-	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="../css/themecss/lib.css" rel="stylesheet">
+	<link href="../js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 	<!-- Theme CSS
 	============================================ -->
-	<link href="css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="css/themecss/so-categories.css" rel="stylesheet">
-	<link href="css/themecss/so-listing-tabs.css" rel="stylesheet">
-	<link href="css/header8.css" rel="stylesheet">
-	<link href="css/footer5.css" rel="stylesheet">
-	<link id="color_scheme" href="css/home8.css" rel="stylesheet">
-	<link id="color_scheme" href="css/home4.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+	<link href="../css/themecss/so_megamenu.css" rel="stylesheet">
+	<link href="../css/themecss/so-categories.css" rel="stylesheet">
+	<link href="../css/themecss/so-listing-tabs.css" rel="stylesheet">
+	<link href="../css/header8.css" rel="stylesheet">
+	<link href="../css/footer5.css" rel="stylesheet">
+	<link id="color_scheme" href="../css/home8.css" rel="stylesheet">
+	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
+	<link href="../css/responsive.css" rel="stylesheet">
+	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
+	<link href="../css/responsive.css" rel="stylesheet">
 
 
 </head>
@@ -131,45 +131,65 @@
 							</div>
 						</div>
 
-
-
-
 						<div class="col-lg-8 col-sm-8 col-xs-12 contact-form">
-							<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-								<fieldset>
+						<form metod="post" id="captcha_form"  class="form-horizontal">
+						<fieldset>
 										<h3><u>Votre message</u></h3>
+
 										<div class="form-group required">
-											<label class="col-sm-2 control-label" for="input-name">Nom et prénom</label>
-												<div class="col-sm-10">
-													<input type="text" name="name" value="" id="input-name" class="form-control">
-												</div>
+										
+											<label class="col-sm-2 control-label" for="input-name">Prénom :</label>
+											<div class="col-sm-10">
+												<input type="text" name="first_name" id="first_name" class="form-control" />
+												<span id="first_name_error" class="text-danger"></span>
+											</div>
+										</div>
+
+										<div class="form-group required">
+										
+											<label class="col-sm-2 control-label" for="input-name">Nom :</label>
+											<div class="col-sm-10">
+												<input type="text" name="last_name" id="last_name" class="form-control" />
+												<span id="last_name_error" class="text-danger"></span>
+											</div>
+										</div>
+
+										<div class="form-group required">
+											<label class="col-sm-2 control-label" for="input-name">Téléphone :</label>
+											<div class="col-sm-10">
+												<input type="number" name="tel" id="tel" class="form-control" />
+												<span id="tel_error" class="text-danger"></span>
+											</div>
+										</div>
+
+										<div class="form-group required">
+											<label class="col-sm-2 control-label" for="input-name">Adresse Email :</label>
+											<div class="col-sm-10">
+											<input type="text" name="email" id="email" class="form-control" />
+											<span id="email_error" class="text-danger"></span>
+											</div>
 										</div>
 										<div class="form-group required">
-											<label class="col-sm-2 control-label" for="input-phone">Téléphone</label>
-												<div class="col-sm-10">
-													<input type="text" name="phone" value="" id="input-phone" class="form-control">
-												</div>
+											<label class="col-sm-2 control-label" for="input-name">Votre message :</label>
+											<div class="col-sm-10">
+												<textarea name="message" rows="10" id="input-enquiry" class="form-control"></textarea>
+												<span id="email_error" class="text-danger"></span>
+											</div>
 										</div>
 										<div class="form-group required">
-											<label class="col-sm-2 control-label" for="input-email">Adresse e-mail</label>
-												<div class="col-sm-10">
-														<input type="text" name="email" value="" id="input-email" class="form-control">
-												</div>
+										<div class="pull-right">
+											<div class="g-recaptcha" data-sitekey="6Ldv2bcUAAAAAFeYuQAQWH7I_BVv2_2_vvmn2Fpp"></div>
+											<span id="captcha_error" class="text-danger"></span>
+											</div>
 										</div>
-										<div class="form-group required">
-											<label class="col-sm-2 control-label" for="input-enquiry">Votre message</label>
-												<div class="col-sm-10">
-													<textarea name="enquiry" rows="10" id="input-enquiry" class="form-control"></textarea>
-												</div>
+										</fieldset>
+										<div class="buttons">
+											<div class="pull-right">
+												<button class="btn btn-default buttonGray" type="submit" name="register" id="register">
+														<span>Envoyer votre message</span>
+													</button>
+													</div>
 										</div>
-								</fieldset>
-								<div class="buttons">
-									<div class="pull-right">
-										<button class="btn btn-default buttonGray" type="submit">
-											<span>Envoyer</span>
-										</button>
-									</div>
-								</div>
 							</form>
 						</div>
 					</div>
@@ -190,24 +210,67 @@
 	<!-- Include Libs & Plugins
 ============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="js/themejs/libs.js"></script>
-	<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="../js/themejs/libs.js"></script>
+	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="js/themejs/application.js"></script>
-	<script type="text/javascript" src="js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+		$(document).ready(function(){
+
+		$('#captcha_form').on('submit', function(event){
+		event.preventDefault();
+		$.ajax({
+		url:"process_data.php",
+		method:"POST",
+		data:$(this).serialize(),
+		dataType:"json",
+		beforeSend:function()
+		{
+			$('#register').attr('disabled','disabled');
+		},
+		success:function(data)
+		{
+			$('#register').attr('disabled', false);
+			if(data.success)
+			{
+			$('#captcha_form')[0].reset();
+			$('#first_name_error').text('');
+			$('#last_name_error').text('');
+			$('#email_error').text('');
+			$('#tel_error').text('');
+			$('#captcha_error').text('');
+			grecaptcha.reset();
+			alert('Form Successfully validated');
+			}
+			else
+			{
+			$('#first_name_error').text(data.first_name_error);
+			$('#last_name_error').text(data.last_name_error);
+			$('#email_error').text(data.email_error);
+			$('#tel_error').text(data.tel_error);
+			$('#captcha_error').text(data.captcha_error);
+			}
+		}
+		})
+		});
+
+		});
+	</script>
 
 
 </body>
