@@ -34,7 +34,7 @@
 	
     <!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
 	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">

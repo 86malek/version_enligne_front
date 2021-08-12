@@ -3592,7 +3592,7 @@ tbody.collapse.in {
           box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 .dropdown-menu.pull-right {
-  right: 0;
+  right: 16px;
   left: auto;
 }
 .dropdown-menu .divider {
@@ -3686,7 +3686,7 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
-    right: 0;
+    right: 0px;
     left: auto;
   }
   .navbar-right .dropdown-menu-left {
@@ -3694,9 +3694,16 @@ tbody.collapse.in {
     left: 0;
   }
 }
+@media (max-width: 440px) {
+
+  .dropdown-menu.pull-right{
+    right: -60px;
+    left: auto;
+  }
+}
 .btn-group,
 .btn-group-vertical {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   vertical-align: middle;
 }
