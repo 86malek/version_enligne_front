@@ -2437,6 +2437,7 @@ STRUCTURE
 .shopping_cart .shoppingcart-box .table-striped a {
   color: #666;
   font-weight: bold;
+  white-space: normal;
 }
 .shopping_cart .shoppingcart-box .table-striped a.fa-edit {
   display: none;

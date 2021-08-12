@@ -26,8 +26,8 @@ session_start();
 	  <tr>
 	   <td>'.$values["product_name"].'</td>
 	   <td>'.$values["product_quantity"].'</td>
-	   <td align="right">'.$values["product_price"].' TND</td>
-	   <td align="right">'.number_format($values["product_quantity"] * $values["product_price"], 3).' TND</td>
+	   <td align="right" style="white-space: nowrap;">'.$values["product_price"].' TND</td>
+	   <td align="right" style="white-space: nowrap;">'.number_format($values["product_quantity"] * $values["product_price"], 3).' TND</td>
 	  </tr>
 	  ';
 	  $total_price = $total_price + ($values["product_quantity"] * $values["product_price"]);
@@ -37,8 +37,8 @@ session_start();
 	 $item_details = substr($item_details, 0, -2);
 	 $order_details .= '
 	 <tr>  
-			<td colspan="3" align="right">Total</td>  
-			<td align="right">'.number_format($total_price, 3).' TND</td>
+			<td colspan="3" align="right;">Total</td>  
+			<td align="right" style="white-space: nowrap;">'.number_format($total_price, 3).' TND</td>
 		</tr>
 	 ';
 	}else{
