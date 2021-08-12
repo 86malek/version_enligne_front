@@ -30,7 +30,7 @@
 
                                                             <div class="banners banner__img">
                                                                 <div>
-                                                                    <a title="' . $nouveau_pack_image['eg_image_produit_title'] . '" href="#"><img src="https://betatest.expert-gaming.tn' . $nouveau_pack_image['eg_image_produit_nom'] . '" alt="' . $nouveau_pack_image['eg_image_produit_title'] . '"></a>
+                                                                    <a title="' . $nouveau_pack_image['eg_image_produit_title'] . '" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id=' . $nouveau_pack['eg_produit_id'] . '"><img src="https://betatest.expert-gaming.tn' . $nouveau_pack_image['eg_image_produit_nom'] . '" alt="' . $nouveau_pack_image['eg_image_produit_title'] . '"></a>
                                                                 </div>
                                                             </div>
 
@@ -44,7 +44,7 @@
                                                                         <div class="banner__info">
                                                                             <h2>'.$nouveau_pack['eg_produit_modele'].'</h2>
                                                                             <p>'.$nouveau_pack['eg_produit_nom'].'</p>
-                                                                            <a title="Shop Now" href="#">Voir plus &gt;&gt;</a>
+                                                                            <a title="Shop Now" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id=' . $nouveau_pack['eg_produit_id'] . '">Voir plus &gt;&gt;</a>
                                                                         </div>
                                                                 
                                                                 </div>

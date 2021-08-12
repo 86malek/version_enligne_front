@@ -105,8 +105,7 @@
 						<a data-loading-text="Loading..." class="top_cart dropdown-toggle" data-toggle="dropdown">
 							<div class="shopcart">
 								<span class="handle pull-left"><i class="bi bi-cart3"></i></span>
-								<span class="cart-counter">
-								</span>
+								<span class="cart-counter"></span>
 							</div>
 						</a>
 						
@@ -115,27 +114,29 @@
 								<span id="cart_details"></span>									
 								</li>
 								<li>
-									<div>
-										
-										<p class="text-right"> <a class="btn view-cart" href="cart.html"><i class="fa fa-shopping-cart"></i>View Cart</a>&nbsp;&nbsp;&nbsp; 
-										<a class="btn btn-mega checkout-cart" href="checkout.html"><i class="fa fa-share"></i>Checkout</a> </p>
+									<div>										
+										<p class="text-right">								
+											<a class="btn btn-sm" href="#" id="clear_cart"><i class="fa fa-shopping-cart"></i>Vider le panier</a>
+											<a class="btn btn-sm" href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/info_commande.php"><i class="fa fa-share"></i>Commander</a>
+										</p>
+
 									</div>
 								</li>
+								<li>
+								<?php 
+						if(!empty($_SESSION["success_message"])){
+						?>
+							<div class="alert alert-success text-center"><?php echo $_SESSION["success_message"]; ?></div>
+						<?php
+						}
+						?>
+</li>
+								
 							</ul>
+							
 					</div>
 					
 					<!--//panier-->
-					<div id="popover_content_wrapper" style="display: none">
-						<span id="cart_details"></span>
-						<div align="right">
-						<a href="order_process.php" class="btn btn-primary" id="check_out_cart">
-						<span class="glyphicon glyphicon-shopping-cart"></span> Check out
-						</a>
-						<a href="#" class="btn btn-default" id="clear_cart">
-						<span class="glyphicon glyphicon-trash"></span> Clear
-						</a>
-						</div>
-					</div>
 					<!--favoris-->
 					<div class="btn-group btn-shopping-cart">
 						<a href="#" class="top_cart dropdown-toggle">
@@ -189,7 +190,7 @@
 											<div class="container">
 												<ul class="megamenu " data-transition="slide" data-animationtime="250">
 													<li class="home">
-														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>">Accueil</a>
+														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>">Accueil</a>
 													</li>
 													<?php
 

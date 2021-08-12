@@ -22,7 +22,7 @@ if($nb_comm == 0){
 							<div class="banner__item">
 								<div class="banners banner__img">
 									<div>
-										<a title="' . $comm['eg_comm_titre'] . '" href="pages/actu_detail.php?id_actu='.$comm['eg_comm_id'].'">
+										<a title="' . $comm['eg_comm_titre'] . '" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/actu_detail.php?id_actu='.$comm['eg_comm_id'].'">
 											<img src="https://betatest.expert-gaming.tn' . $comm['eg_comm_img'] . '" alt="' . $comm['eg_comm_titre'] . '">
 										</a>
 									</div>

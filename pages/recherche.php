@@ -230,7 +230,7 @@ include("../config/fonction.php");
 																echo'
 																		<div class="right-block">
 																		<div class="caption">
-																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
+																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
 																			
 																			
 																			$text = wordwrap($produits['eg_produit_nom'], 80, "***", true); // insertion de marqueurs ***
@@ -329,17 +329,21 @@ include("../config/fonction.php");
 
 																		';
 
-														if($produits['eg_produit_dispo'] == 0){
+																		if($produits['eg_produit_dispo'] == 0){
 
-															echo'
-																			<button class="addToCart" type="button" data-toggle="tooltip" title=""  data-original-title="Bientot disponible" disabled><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
-															';
-														}else{
-															echo'
-															<button class="addToCart" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
-															
-															';
-														}
+																			echo'
+																			<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
+																			<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
+																			';
+																		}else{
+																			echo'
+																			<input type="hidden" name="hidden_name" id="name'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_nom"].'" />
+																			<input type="hidden" name="hidden_price" id="price'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_prix"].'" />
+																			<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control" value="1" />
+																			<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
+																			
+																			';
+																		}
 
 														echo'
 																			<button class="wishlist" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible"><i class="fa fa-heart"></i></button>
@@ -410,7 +414,6 @@ include("../config/fonction.php");
 	<script type="text/javascript" src="../js/themejs/application.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
-	<script type="text/javascript" src="../js/themejs/addtocart.js"></script>
 	<script>
 		// Check if Cookie exists
 		if ($.cookie('display')) {

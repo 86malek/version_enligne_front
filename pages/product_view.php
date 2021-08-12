@@ -235,11 +235,19 @@
 
 													';
 
-												}else{
-
+												}elseif($quickview_product_description['eg_produit_dispo'] == 3){
+	
 													echo'
 													
 													<div class="stock"><span class="status-commande">Sur commande</span></div>
+
+													';
+
+												}elseif($quickview_product_description['eg_produit_dispo'] == 4){
+
+													echo'
+													
+													<div class="stock"><span class="status-soon">En arrivage</span></div>
 
 													';
 
@@ -259,7 +267,7 @@
 													$quickview_marque = $PDO_query_quickview_marque->fetch();
 
 													echo'
-														<div class="brand"><span>Marque : </span><u><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/products.php?marque_id='.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
+														<div class="brand"><span>Marque : </span><u><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?marque_id='.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
 													';
 													
 													$PDO_query_quickview_marque->closeCursor();
@@ -277,38 +285,56 @@
 												<div id="product">
 
 													<div class="form-group box-info-product">
-														<div class="option quantity">
-															<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
-																<label>Qt<sup>é</sup> </label>
-																<input class="form-control" type="text" name="quantity" value="1"/>
-																<input type="hidden" name="product_id" value="50"/>
-																<span class="input-group-addon product_quantity_down">− </span>
-																<span class="input-group-addon product_quantity_up">+ </span>
-															</div>
-														</div>
+														
 														';
 
 														if($quickview_product_description['eg_produit_dispo'] == 0){
 
 															echo'
-		
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
+															<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
 															<div class="cart">
 															<input type="button" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Ajouter au panier" disabled="disabled" />
 															</div>
-		
+
 															';
-		
-		
 														}else{
-		
 															echo'
+															<input type="hidden" name="hidden_name" id="name'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_nom"].'" />';
+
+															if($quickview_product_description['eg_produit_promo'] > 0){
+
+																echo'
+			
+																<input type="hidden" name="hidden_price" id="price'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_promo"].'" />
+																';
+			
+			
+															}else{
+			
+																echo'
+			
+																<input type="hidden" name="hidden_price" id="price'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_prix"].'" />
+																';
+			
+															}
+
 															
-															<div class="cart">
-															<input type="button" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Ajouter au panier" />
+															
+															echo'
+															<div class="option quantity">
+																<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+																	<label>Qt<sup>é</sup> </label>
+																	<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$quickview_product_description["eg_produit_id"].'" class="form-control" value="1"/>
+																	<span class="input-group-addon product_quantity_down">− </span>
+																	<span class="input-group-addon product_quantity_up">+ </span>
+																</div>
 															</div>
-		
+															<div class="cart">
+															<button class="add_to_cart btn btn-mega btn-lg panier_details" type="button" name="add_to_cart" id="'.$quickview_product_description["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..."><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
+															</div>
+																														
 															';
-		
 														}
 
 															
@@ -612,14 +638,14 @@
 															}	
 
 														echo'
-														<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="quickview.php?produit_id='.$produits_lies['eg_produit_id'].'">Aperçu rapide</a>
+														<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/quickview.php?produit_id='.$produits_lies['eg_produit_id'].'">Aperçu rapide</a>
 													</div>
 				
 				
 													<div class="right-block">
 													
 														<div class="caption">
-															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
+															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
 															<h5>Référence: ' . $produits_lies['eg_produit_reference'] . '</h5>  
 															<div class="ratings">
 																<div class="box-review form-group">
@@ -696,19 +722,40 @@
 																<p>' . $produits_lies['eg_produit_description'] . '</p>
 															</div>
 														</div>
+														';
+														if($produits_lies['eg_produit_dispo'] == 0){
+
+															echo'
+															<div class="button-group">
+																<button class="addToCart" type="button" data-toggle="tooltip" title="Hors stock" >
+																	<i class="fa fa-exclamation-triangle"></i> 
+																	<span class="hidden-xs">Hors stock</span>
+																</button>
+															</div>
+															';
+														}else{
+															echo'
+															<div class="button-group">
+																<input type="hidden" name="hidden_name" id="name'.$produits_lies["eg_produit_id"].'" value="'.$produits_lies["eg_produit_nom"].'" />
+																<input type="hidden" name="hidden_price" id="price'.$produits_lies["eg_produit_id"].'" value="'.$produits_lies["eg_produit_prix"].'" />
+																<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits_lies["eg_produit_id"].'" class="form-control" value="1" />
+																<button  class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits_lies["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" >
+																	<i class="fa fa-cart-plus"></i> 
+																	<span class="hidden-xs">Ajouter au panier</span>
+																</button>
+																
+																<button class="wishlist" type="button" data-toggle="tooltip" title="Bientot disponible">
+																	<i class="fa fa-heart"></i>
+																</button>
+																<button class="compare" type="button" data-toggle="tooltip" title="Bientot disponible" >
+																	<i class="fa fa-exchange-alt"></i>
+																</button>
+															</div>
+															
+															';
+														}
 				
-														<div class="button-group">
-															<button class="addToCart" type="button" data-toggle="tooltip" title="Bientot disponible" >
-																<i class="fa fa-shopping-cart"></i> 
-																<span class="hidden-xs">Ajouter au panier</span>
-															</button>
-															<button class="wishlist" type="button" data-toggle="tooltip" title="Bientot disponible">
-																<i class="fa fa-heart"></i>
-															</button>
-															<button class="compare" type="button" data-toggle="tooltip" title="Bientot disponible" >
-																<i class="fa fa-exchange-alt"></i>
-															</button>
-														</div>
+													echo'	
 													</div><!-- right block -->
 				
 														</div>

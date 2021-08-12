@@ -3422,6 +3422,11 @@ input[type="color"].form-control {
   border-radius: 0;
 }
 
+input[type="number"].form-control {
+  margin-bottom: 10px;
+} 
+
+
 .input-group .input-group-addon {
   font-size: 12px;
   height: 30px;
@@ -4514,7 +4519,7 @@ div.tab-slider
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 7px 14px;
+  padding: 7px 12px;
   display: inline-block;
 }
 .products-list .product-layout .button-group .addToCart i,
@@ -4588,7 +4593,7 @@ div.tab-slider
   border: 1px solid #ddd;
   height: 38px;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 11px;
   vertical-align: top;
 }
 .products-list .product-layout .button-group .wishlist:hover,
@@ -5205,6 +5210,19 @@ div.tab-slider
   margin-left: 0px !important;
 }
 
+.stock .status-soon {
+  color: #1f07f8;;
+}
+
+.stock .status-soon:before {
+  content: "\f046";
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #1f07f8;
+  margin-right: 5px !important;
+  margin-left: 0px !important;
+}
+
 .left-content-product .content-product-right #product {
   float: left;
   width: 100%;
@@ -5300,7 +5318,7 @@ div.tab-slider
   margin: 0;
   margin-right: 17px;
   padding: 0 10px;
-  width: 35px;
+  width: 60px;
   border: 1px solid #bdc2c9;
   border-radius: 0;
   z-index: 0;
@@ -5372,6 +5390,15 @@ div.tab-slider
   margin-right: 5px;
 }
 .left-content-product .content-product-right .box-info-product .cart input {
+  background: #f7bb11;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 12px 16px;
+}
+.left-content-product .content-product-right .box-info-product .cart .panier_details {
   background: #f7bb11;
   border-radius: 0;
   color: #fff;

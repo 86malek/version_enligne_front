@@ -308,7 +308,7 @@
 															echo '
 
 																<li class="">
-																<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php?marque_id='.$marque['eg_marque_id'].'&sous_cat_id='.$_GET['sous_cat_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
+																<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?marque_id='.$marque['eg_marque_id'].'&sous_cat_id='.$_GET['sous_cat_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
 																<span class="dcjq-icon"></span>
 																</li>
 
@@ -328,7 +328,7 @@
 														echo '
 
 															<li class="">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php?marque_id='.$marque['eg_marque_id'].'&cat_id='.$_GET['cat_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?marque_id='.$marque['eg_marque_id'].'&cat_id='.$_GET['cat_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
 															<span class="dcjq-icon"></span>
 															</li>
 
@@ -348,7 +348,7 @@
 													echo '
 
 														<li class="">
-														<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php?marque_id='.$marque['eg_marque_id'].'&menu_id='.$_GET['menu_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
+														<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?marque_id='.$marque['eg_marque_id'].'&menu_id='.$_GET['menu_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
 														<span class="dcjq-icon"></span>
 														</li>
 
@@ -362,7 +362,7 @@
 											echo '
 
 													<li class="">
-													<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php" class="cutom-parent">Tous nos produits</a>
+													<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php" class="cutom-parent">Tous nos produits</a>
 													<span class="dcjq-icon"></span>
 													</li>
 
@@ -378,7 +378,7 @@
 												echo '
 
 													<li class="">
-													<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/promo.php?marque_id='.$marque['eg_marque_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
+													<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?marque_id='.$marque['eg_marque_id'].'" class="cutom-parent">' . $marque['eg_marque_nom'] . '</a>
 													<span class="dcjq-icon"></span>
 													</li>
 
@@ -411,19 +411,19 @@
 								?>
 
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?menu_id=<?php echo $menu_id ;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?menu_id=<?php echo $menu_id ;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?menu_id=<?php echo $menu_id ;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?menu_id=<?php echo $menu_id ;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?menu_id=<?php echo $menu_id ;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?menu_id=<?php echo $menu_id ;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?menu_id=<?php echo $menu_id ;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?menu_id=<?php echo $menu_id ;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 											<span class="dcjq-icon"></span>
 										</li>
 
@@ -434,19 +434,19 @@
 										?>
 									
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&menu_id=<?php echo $menu_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 
@@ -456,19 +456,19 @@
 								?>
 
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?cat_id=<?php echo $cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?cat_id=<?php echo $cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?cat_id=<?php echo $cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?cat_id=<?php echo $cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?cat_id=<?php echo $cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?cat_id=<?php echo $cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 											<span class="dcjq-icon"></span>
 										</li>
 										<li class="">
-											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?cat_id=<?php echo $cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+											<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?cat_id=<?php echo $cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 											<span class="dcjq-icon"></span>
 										</li>
 
@@ -479,19 +479,19 @@
 										?>
 									
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&cat_id=<?php echo $cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 
@@ -502,19 +502,19 @@
 									?>
 										
 												<li class="">
-													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 													<span class="dcjq-icon"></span>
 												</li>
 												<li class="">
-													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 													<span class="dcjq-icon"></span>
 												</li>
 												<li class="">
-													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 													<span class="dcjq-icon"></span>
 												</li>
 												<li class="">
-													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+													<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 													<span class="dcjq-icon"></span>
 												</li>
 	
@@ -525,19 +525,19 @@
 									?>
 									
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?marque_id=<?php echo $marque_id;?>&sous_cat_id=<?php echo $sous_cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 
@@ -547,19 +547,19 @@
 									?>
 
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&asc_prix=1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?sous_cat_id=<?php echo $sous_cat_id;?>&desc_prix=1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 									<?php
@@ -567,19 +567,19 @@
 									?>
 
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?asc_prix=1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/pages/promo.php?desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?desc_prix=1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 
@@ -611,7 +611,7 @@
 												<div class="product-latest-item">
 													<div class="media">
 														<div class="media-left">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits_recents['eg_produit_id'].'">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits_recents['eg_produit_id'].'">
 											';
 
 												$PDO_query_produits_recents_img = Bdd::connectBdd()->prepare("SELECT * FROM eg_image_produit WHERE eg_image_produit_statut = 1 AND eg_produit_id = :eg_produit_id LIMIT 1");
@@ -635,7 +635,7 @@
 																</div>
 																<div class="media-body">
 																	<div class="caption">
-																		<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits_recents['eg_produit_id'].'">' . $produits_recents['eg_produit_nom'] . '</a></h4>
+																		<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits_recents['eg_produit_id'].'">' . $produits_recents['eg_produit_nom'] . '</a></h4>
 
 																		<div class="price">
 																			<span class="price-new">' . $produits_recents['eg_produit_prix'] . ' TND</span>
@@ -2085,7 +2085,7 @@
 																echo'
 																		<div class="right-block">
 																		<div class="caption">
-																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
+																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
 																			
 																			
 																			$text = wordwrap($produits['eg_produit_nom'], 80, "***", true); // insertion de marqueurs ***
@@ -2144,11 +2144,19 @@
 				
 																	';
 				
-																}else{
-				
+																}elseif($produits['eg_produit_dispo'] == 3){
+	
 																	echo'
 																	
 																	<div class="stock"><span class="status-commande">Sur commande</span></div>
+				
+																	';
+				
+																}elseif($produits['eg_produit_dispo'] == 4){
+				
+																	echo'
+																	
+																	<div class="stock"><span class="status-soon">En arrivage</span></div>
 				
 																	';
 				
@@ -2187,11 +2195,15 @@
 														if($produits['eg_produit_dispo'] == 0){
 
 															echo'
-																			<button class="addToCart" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible" disabled><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
+															<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
 															';
 														}else{
 															echo'
-															<button class="addToCart" type="button" data-toggle="tooltip" title="" data-original-title="Bientot disponible"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Ajouter au panier</span></button>
+															<input type="hidden" name="hidden_name" id="name'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_nom"].'" />
+															<input type="hidden" name="hidden_price" id="price'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_promo"].'" />
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control" value="1" />
+															<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 															
 															';
 														}
@@ -2303,7 +2315,6 @@
 	<script type="text/javascript" src="../js/themejs/application.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
-	<script type="text/javascript" src="../js/themejs/addtocart.js"></script>
 	<script>
 		// Check if Cookie exists
 		if ($.cookie('display')) {
