@@ -186,7 +186,7 @@ session_start();
 											<h4>Details du paiement</h4>
 											<div class="row">
 												<div class="col-md-12">
-													<label>Choisir votre type de paiement (Tous paiemùent par chéque )</label>
+													<label>Choisir votre type de paiement (Tous paiemùent par chéque)</label>
 													<select name="commande" class="form-control"  required>
 													<option value="">Selectionnez votre type de paiement</option>
 														<option value="Paiement en espèce">Paiement en espèce</option>
@@ -198,7 +198,17 @@ session_start();
 											<div>
 												<input type="hidden" name="total_amount" value="<?php echo $total_price; ?>" />
 												<input type="hidden" name="item_details" value="<?php echo $item_details; ?>" />
-												<button type="submit" name="button_action" id="button_action" class="btn btn-success btn-lg" value="Valider votre commande">Valider votre commande</button>
+												<?php 
+												if(!empty($_SESSION["shopping_cart"])){
+												?>
+													<button type="submit" name="button_action" id="button_action" class="btn btn-success btn-lg" value="Valider votre commande">Valider votre commande</button>
+												<?php
+												}else{
+												?>
+												<button type="submit" name="button_action" id="button_action" class="btn btn-success btn-lg" value="Valider votre commande" disabled>Valider votre commande</button>
+												<?php
+												}
+												?>
 											</div>
 											<hr />
 											<small>Informations : <br> Une fois votre commande validée un commercial vous contactera pour la suite.</small>
