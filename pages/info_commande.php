@@ -148,28 +148,28 @@ session_start();
 										<div class="col-md-6" style="border-right:1px solid #ddd;">
 											<div class="row">
 												<div class="col-sm-12">
-													<label><b>Nom et Prénom *</b></label>
+													<label><b>Nom et Prénom *:</b></label>
 													<input type="text" name="client" id="client" class="form-control" value="" required/>
 													<span id="error_client" class="text-danger"></span>
 												</div>
 												<div class="col-sm-12">
-													<label><b>Adresse email *</b></label>
+													<label><b>Adresse email *:</b></label>
 													<input type="email" name="email" id="email" class="form-control" value="" required />
 													<span id="error_email_address" class="text-danger"></span>
 												</div>
 												<div class="col-sm-12">
-													<label><b>Adresse postale *</b></label>
+													<label><b>Adresse postale *:</b></label>
 													<textarea name="adresse" id="adresse" class="form-control"></textarea>
 													<span id="error_adresse" class="text-danger"></span>
 												</div>
 												
 												<div class="col-sm-6">
-													<label><b>Gouvernorat *</b></label>
+													<label><b>Gouvernorat *:</b></label>
 													<input type="text" name="gouvernorat" id="gouvernorat" class="form-control" value="" required/>
 													<span id="error_gouvernorat" class="text-danger"></span>
 												</div>
 												<div class="col-sm-6">
-													<label><b>Code postal *</b></label>
+													<label><b>Code postal *:</b></label>
 													<input type="number" onKeyPress="if(this.value.length==4) return false;" onkeydown="return event.keyCode !== 69" name="postal" id="postal" class="form-control" value="" required/>
 													<span id="error_postal" class="text-danger"></span>
 												</div>
@@ -182,19 +182,31 @@ session_start();
 												</div>
 											</div>
 											<hr />
-											<h4>Details du paiement</h4>
+											<h4>Détails du paiement</h4>
 											<div class="row">
 												<div class="col-md-12">
-													<label>Choisir votre type de paiement (Tous paiemùent par chéque)</label>
+													<label>Choisissez votre mode de paiement *:</label>
 													<select name="commande" class="form-control"  required>
-													<option value="">Selectionnez votre type de paiement</option>
-														<option value="Paiement en espèce">Paiement en espèce</option>
+														<option value="">Sélectionner votre mode de paiement</option>
+														<option value="En espèce (dans la boutique)">En espèce (dans la boutique)</option>
+														<option value="En espèce (lors de la livraison)">En espèce (lors de la livraison)</option>
+														<option value="Par chèque (dans la boutique)">Par chèque (dans la boutique)</option>
 													</select>
 												</div>
 											</div>
-											<br />
-											<hr />
-											<div>
+											
+										</div>
+										<div class="col-md-6">
+											<h4>Détails de la commande</h4>
+											<div class="row">
+											<div class="col-md-12">
+											<?php
+											echo $order_details;
+											?>
+											</div>
+											</div>
+											<div class="row">
+											<div class="col-md-12">
 												<input type="hidden" name="total_amount" value="<?php echo $total_price; ?>" />
 												<input type="hidden" name="item_details" value="<?php echo $item_details; ?>" />
 												<?php 
@@ -208,15 +220,11 @@ session_start();
 												<?php
 												}
 												?>
-											</div>
+											
 											<hr />
-											<small>Informations : <br> Une fois votre commande validée un commercial vous contactera pour la suite.</small>
-										</div>
-										<div class="col-md-6">
-											<h4>Détails de la commande</h4>
-											<?php
-											echo $order_details;
-											?>
+											<small>Informations : <br> Une fois vous votre commande est validée, un commercial vous contactera pour la suite.</small>
+											</div>
+											</div>
 										</div>
 									</div>
 								</form>
