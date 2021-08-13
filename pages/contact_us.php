@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Nous contacter</title>
+	<title>Nous contacter</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -135,7 +135,7 @@
 						<form metod="post" id="captcha_form"  class="form-horizontal">
 						<fieldset>
 										<h3><u>Votre message</u></h3>
-
+										<div class="alert alert-success text-center" id="ok" style="display:none;"></div>
 										<div class="form-group required">
 										
 											<label class="col-sm-2 control-label" for="input-name">Prénom :</label>
@@ -173,7 +173,7 @@
 											<label class="col-sm-2 control-label" for="input-name">Votre message :</label>
 											<div class="col-sm-10">
 												<textarea name="message" rows="10" id="input-enquiry" class="form-control"></textarea>
-												<span id="email_error" class="text-danger"></span>
+												<span id="msg_error" class="text-danger"></span>
 											</div>
 										</div>
 										<div class="form-group required">
@@ -253,9 +253,10 @@
 			$('#last_name_error').text('');
 			$('#email_error').text('');
 			$('#tel_error').text('');
+			$('#msg_error').text('');
 			$('#captcha_error').text('');
 			grecaptcha.reset();
-			alert('Form Successfully validated');
+			document.getElementById('#ok').style.display = block;
 			}
 			else
 			{
@@ -263,6 +264,7 @@
 			$('#last_name_error').text(data.last_name_error);
 			$('#email_error').text(data.email_error);
 			$('#tel_error').text(data.tel_error);
+			$('#msg_error').text(data.tel_error);
 			$('#captcha_error').text(data.captcha_error);
 			}
 		}
