@@ -75,8 +75,8 @@ $date = date_format($date, "d/m/Y");
 	<div class="main-container container">
 		<ul class="breadcrumb">
 					<li><i class="fa fa-home"></i></li>
-					<li><a href="actu.php">Actualités</a></li>
-					<li>Details actualité</li>
+					<li><a href="actu.php">Toutes les actualités</a></li>
+					<li>Lire l'article</li>
 		</ul>
 			
 		<div class="row">

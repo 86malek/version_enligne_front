@@ -86,13 +86,13 @@
 								</h2>
 
 								<div class="about-text">
-                                	<b>Nom de Societé</b> : STE "Expert Gaming"<br><br>
+                                	<b>Nom de société</b> : STE "Expert Gaming"<br><br>
 
-									<b>Siège social</b> : Menzah 6 Galerie le colisée en Face de Clinique Farabi<br><br>
+									<b>Siège social</b> : Menzah 6 Galerie le colisée en face de Clinique Farabi<br><br>
 
 									<b>Courrier électronique</b> : <a href="mailto:contact@expert-gaming.tn">contact@expert-gaming.tn</a> / <a href="mailto:expert.gaming.tunisie@gmail.com">expert.gaming.tunisie@gmail.com</a><br><br>
 
-									<b>Matricule Fiscale</b> : 1719902/E<br><br>
+									<b>Matricule fiscal</b> : 1719902/E<br><br>
 
 									<b>Directeur de la publication</b> : Hedi JMEL<br><br>
 									<b>Co-fondateur</b> : Zied GROMBALI<br><br>

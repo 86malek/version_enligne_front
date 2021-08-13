@@ -71,7 +71,7 @@
 		<div class="main-container container">
 			<ul class="breadcrumb">
 				<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="A_propos_de_nous">À propos de nous</a></li>
+				<li>À propos de nous</li>
 			</ul>
 			
 			<div class="row">

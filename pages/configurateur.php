@@ -70,7 +70,7 @@
 			<div class="main-container container">
 				<ul class="breadcrumb">
 					<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-					<li><a href="Configurateur">Configurateur</a></li>
+					<li>Configurateur</li>
 				</ul>
 				
 				<div class="row">
