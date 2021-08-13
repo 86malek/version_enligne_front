@@ -8,7 +8,7 @@
 <head>
     <!-- Basic page needs
 	============================================ -->
-	<title>Expert Gaming | Accueil</title>
+	<title>Expert Gaming</title>
 	<meta charset="utf-8">
     <meta name="keywords" content="Expert Gaming, Vente Pc Gamer, Carte Graphique, Processeur en Tunisie, Vente Pc Gamer et accessoires en Tunisie" />
     <meta name="robots" content="index, follow" />
