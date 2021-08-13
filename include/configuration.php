@@ -51,7 +51,7 @@
 
 		<div class="container">
 			<div class="item">
-				<img src="image/banner/config.jpg" alt="Configuration" class="img-responsive">
+				<a  href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/<?php echo $PARAM_url_non_doc_site; ?>pages/products.php?cat_id=11"><img src="image/banner/config.jpg" alt="Configuration" class="img-responsive"></a>
 			</div>
 			<?php
 

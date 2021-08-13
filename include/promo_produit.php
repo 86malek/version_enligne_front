@@ -140,7 +140,7 @@
 										
 										<div class="button-group">
 										';
-										if($produit_promo['eg_produit_dispo'] == 0 || $cartes_graphiques['eg_produit_dispo'] == 4){
+										if($produit_promo['eg_produit_dispo'] == 0 || $produit_promo['eg_produit_dispo'] == 4){
 
 											echo'
 											

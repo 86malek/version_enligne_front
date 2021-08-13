@@ -154,7 +154,7 @@
 										<div class="button-group">
 										';
 										
-										if($produit_nouveau['eg_produit_dispo'] == 0 || $cartes_graphiques['eg_produit_dispo'] == 4){
+										if($produit_nouveau['eg_produit_dispo'] == 0 || $produit_nouveau['eg_produit_dispo'] == 4){
 
 											echo'
 											

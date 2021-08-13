@@ -118,7 +118,7 @@
 		<div class="footer-bottom-block ">
 			<div class=" container">
 				<div class="row">
-					<div class="col-sm-5 copyright-text"> © 2021 Expert-Gaming. Tous les droits sont réservés. </div>
+					<div class="col-sm-12 copyright-text"> © 2021 Expert-Gaming. Tous les droits sont réservés. </div>
 					
 					<!--Back To Top-->
 					<div class="btn-to-top">
