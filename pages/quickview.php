@@ -23,6 +23,7 @@
 	 <!-- Google web fonts
 	============================================ -->
      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 	
      <!-- Libs CSS
 	============================================ -->
@@ -250,41 +251,61 @@
 												<div id="product">
 			   
 													<div class="form-group box-info-product">
-														<div class="option quantity">
-															<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
-																<label>Qt<sup>é</sup> </label>
-																<input class="form-control" type="text" name="quantity" value="1"/>
-																<input type="hidden" name="product_id" value="50"/>
-																<span class="input-group-addon product_quantity_down">− </span>
-																<span class="input-group-addon product_quantity_up">+ </span>
-															</div>
-														</div>
 														';
 
 														if($quickview_product_description['eg_produit_dispo'] == 0){
 
 															echo'
-		
-															<div class="cart">
-															<input type="button" data-toggle="tooltip" title="" value="Ajouter au panier" class="btn btn-mega btn-lg" data-original-title="Bientot disponible" disabled="disabled" />
+															<div class="option quantity">
+																<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+																	<label>Qt<sup>é</sup> </label>
+																	<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$quickview_product_description["eg_produit_id"].'" class="form-control" value="1"/>
+																	<span class="input-group-addon product_quantity_down">− </span>
+																	<span class="input-group-addon product_quantity_up">+ </span>
+																</div>
 															</div>
-		
+															<div class="cart">
+															<button class="add_to_cart btn btn-mega btn-lg panier_details" type="button" name="add_to_cart" id="'.$quickview_product_description["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." disabled="disabled"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
+															</div>
+
 															';
-		
-		
 														}else{
-
-
-															// PANIER
-		
 															echo'
+															<input type="hidden" name="hidden_name" id="name'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_nom"].'" />';
+
+															if($quickview_product_description['eg_produit_promo'] > 0){
+
+																echo'
+			
+																<input type="hidden" name="hidden_price" id="price'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_promo"].'" />
+																';
+			
+			
+															}else{
+			
+																echo'
+			
+																<input type="hidden" name="hidden_price" id="price'.$quickview_product_description["eg_produit_id"].'" value="'.$quickview_product_description["eg_produit_prix"].'" />
+																';
+			
+															}
+
 															
-															<div class="cart">
-															<input type="button" data-toggle="tooltip" title="" value="Ajouter au panier" id="button-cart" class="btn btn-mega btn-lg" data-original-title="Bientot disponible" />
+															
+															echo'
+															<div class="option quantity">
+																<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+																	<label>Qt<sup>é</sup> </label>
+																	<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$quickview_product_description["eg_produit_id"].'" class="form-control" value="1"/>
+																	<span class="input-group-addon product_quantity_down">− </span>
+																	<span class="input-group-addon product_quantity_up">+ </span>
+																</div>
 															</div>
-		
+															<div class="cart">
+															<button class="add_to_cart btn btn-mega btn-lg panier_details" type="button" name="add_to_cart" id="'.$quickview_product_description["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..."><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
+															</div>
+																														
 															';
-		
 														}
 
 
@@ -364,26 +385,25 @@
  <!-- Include Libs & Plugins
 	============================================ -->
  <!-- Placed at the end of the document so the pages load faster -->
- <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
- <script type="text/javascript" src="../js/bootstrap.min.js"></script>
- <script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
- <script type="text/javascript" src="../js/themejs/libs.js"></script>
- <script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
- <script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
- <script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
- <script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
- <script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
- <script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
- 
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="../js/themejs/libs.js"></script>
+	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
 
- <!-- Theme files
-============================================ -->
 
- 
- <script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
- <script type="text/javascript" src="../js/themejs/addtocart.js"></script>
- <script type="text/javascript" src="../js/themejs/application.js"></script>
- <script>
+	<!-- Theme files
+	============================================ -->
+	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+ 	<script>
 		// Get the modal
 		var modal = document.getElementById("myModal");
 

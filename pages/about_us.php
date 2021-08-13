@@ -80,7 +80,7 @@
 					<div class="about-us about-demo-1">
 						<div class="row">
 							<div class="col-lg-5 col-md-5 about-image"> 
-								<img src="https://<?php echo $_SERVER['SERVER_NAME']?>/image/banner/about_us.jpg" alt="About Us"> 
+								<img src="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site; ?>/image/banner/about_us.jpg" alt="About Us"> 
 							</div>
 
 							<div class="col-lg-7 col-md-7 about-info">
@@ -94,28 +94,6 @@
 
 							</div>
 
-						</div>
-
-						<div class="row">
-							<div class="col-lg-12 col-md-12 what-client-say">
-								<div class="client-say-content">
-									<h2 class="about-title line-hori">
-										<span>Témoignages des clients</span>
-									</h2>
-
-									<div class="client-say-slider">
-										<div id="ytcs579bfc965e489183711469840534" class="yt-content-slider owl-theme yt-content-slider-style-1 arrow-default owl2-carousel owl2-theme owl2-loaded" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="30" data-item_lg="1" data-item_sm="1" data-item_xs="1" data-arrows="no" data-pagination="yes" data-lazyload="yes" data-loop="no" data-hoverpause="no">
-											<div class="yt-content-slide yt-clearfix yt-content-wrap">
-												<div class="item">
-													<p class="des-member des-client">“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.”</p>
-													<h3 class="name-member">Jennifer lawrence</h3>
-													<p class="job-member">Co Founder</p>
-												</div>
-											</div>
-										</div>	
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -135,24 +113,24 @@
 	<!-- Include Libs & Plugins
 ============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" href="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" href="js/bootstrap.min.js"></script>
-	<script type="text/javascript" href="js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" href="js/themejs/libs.js"></script>
-	<script type="text/javascript" href="js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" href="js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" href="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" href="js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" href="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" href="js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" href="js/modernizr/modernizr-2.6.2.min.js"></script>
-
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/themejs/libs.js"></script>
+	<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
 
 	<!-- Theme files
-============================================ -->
-	<script type="text/javascript" href="js/themejs/application.js"></script>
-	<script type="text/javascript" href="js/themejs/homepage.js"></script>
-	<script type="text/javascript" href="js/themejs/so_megamenu.js"></script>
+	============================================ -->
+	<script type="text/javascript" src="js/themejs/application.js"></script>
+	<script type="text/javascript" src="js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 
 </body>

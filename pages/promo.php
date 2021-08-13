@@ -75,7 +75,7 @@
 
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
 	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="../css/themecss/lib.css" rel="stylesheet">
@@ -2067,7 +2067,7 @@
 																	if($produits['eg_produit_new'] == 1){
 
 																		echo '
-																		<span class="label label-new">Nouveau</span>
+																		<span class="label label-new-produits">Nouveau</span>
 																		';
 																	}
 
@@ -2192,18 +2192,17 @@
 
 																		';
 
-														if($produits['eg_produit_dispo'] == 0){
+														if($produits['eg_produit_dispo'] == 0 || $produits['eg_produit_dispo'] == 4){
 
 															echo'
-															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
-															<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
+															
 															';
 														}else{
 															echo'
 															<input type="hidden" name="hidden_name" id="name'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_nom"].'" />
 															<input type="hidden" name="hidden_price" id="price'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_promo"].'" />
-															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control" value="1" />
-															<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control-panier" value="1" />
+															<button class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 															
 															';
 														}

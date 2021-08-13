@@ -9,7 +9,7 @@ if(isset($_POST["button_action"]))
 {
 
 $order_number = rand(100000,999999);
-$status = 'Commande en attente';
+$status = 1;
    $order_data = array( 
    ':order_number'   => $order_number,
    ':order_status'   => $status,
