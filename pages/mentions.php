@@ -108,7 +108,7 @@
 							<div class="col-lg-12 col-md-12 what-client-say">
 								<div class="client-say-content">
 									<h2 class="about-title line-hori">
-										<span>Responsables du site</span>
+										<span>Responsables technique du site</span>
 									</h2>
 									<div class="about-text">
                                 	<b>Développeurs</b> : Mohamed Inaam RACHDI et Malek MENCHAOUI<br><br>

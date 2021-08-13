@@ -54,7 +54,7 @@
 									</div>
 									<div class="right-block">
 										<div class="caption">
-											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'/pages/product_view.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">';
+											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">';
 																		$text = wordwrap($cartes_graphiques['eg_produit_nom'], 50, "***", true); // insertion de marqueurs ***
 
 																		$tcut = explode("***", $text); // on créé un tableau à partir des marqueurs ***
