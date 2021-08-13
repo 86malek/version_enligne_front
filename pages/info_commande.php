@@ -58,7 +58,7 @@ session_start();
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert Gaming | Confirmation de la commande</title>
+	<title>Confirmation de la commande</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />

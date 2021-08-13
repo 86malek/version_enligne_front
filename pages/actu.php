@@ -6,7 +6,7 @@
 
 <head>
 
-  <title>Expert-Gaming | Actualités</title>
+  <title>Actualités</title>
     <meta charset="utf-8">
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow" />

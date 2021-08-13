@@ -8,7 +8,7 @@
     
      <!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Détails rapide du produit</title>
+	<title>Aperçu rapide du produit</title>
 	 <meta charset="utf-8" />
      <meta name="robots" content="index, follow" />
    

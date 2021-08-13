@@ -28,7 +28,7 @@ include("../config/fonction.php");
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Recherche</title>
+	<title>Recherche</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
