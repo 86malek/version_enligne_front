@@ -31,7 +31,7 @@
 	
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
 	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="../css/themecss/lib.css" rel="stylesheet">
@@ -49,7 +49,6 @@
 	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
 	<link href="../css/responsive.css" rel="stylesheet">
 	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
-	<link href="../css/responsive.css" rel="stylesheet">
 	<link href="../css/configurateur.css" rel="stylesheet">
 
 
@@ -288,13 +287,19 @@
 														
 														';
 
-														if($quickview_product_description['eg_produit_dispo'] == 0){
+														if($quickview_product_description['eg_produit_dispo'] == 0 || $quickview_product_description['eg_produit_dispo'] == 4){
 
 															echo'
-															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="" class="form-control" value="0" readonly />
-															<button class="addToCart add_to_cart" type="button" data-toggle="tooltip" title="" data-original-title=""  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>
+															<div class="option quantity">
+																<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+																	<label>Qt<sup>é</sup> </label>
+																	<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$quickview_product_description["eg_produit_id"].'" class="form-control" value="1"/>
+																	<span class="input-group-addon product_quantity_down">− </span>
+																	<span class="input-group-addon product_quantity_up">+ </span>
+																</div>
+															</div>
 															<div class="cart">
-															<input type="button" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-original-title="Ajouter au panier" disabled="disabled" />
+															<button class="add_to_cart btn btn-mega btn-lg panier_details" type="button" name="add_to_cart" id="'.$quickview_product_description["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" data-toggle="tooltip" title="" value="Bientot disponible" data-loading-text="Loading..." disabled="disabled"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 															</div>
 
 															';
@@ -723,11 +728,11 @@
 															</div>
 														</div>
 														';
-														if($produits_lies['eg_produit_dispo'] == 0){
+														if($produits_lies['eg_produit_dispo'] == 0 || $produits_lies['eg_produit_dispo'] == 4){
 
 															echo'
 															<div class="button-group">
-																<button class="addToCart" type="button" data-toggle="tooltip" title="Hors stock" >
+																<button class="addToCart" type="button" data-toggle="tooltip" title="Hors stock" disabled>
 																	<i class="fa fa-exclamation-triangle"></i> 
 																	<span class="hidden-xs">Hors stock</span>
 																</button>
@@ -738,16 +743,16 @@
 															<div class="button-group">
 																<input type="hidden" name="hidden_name" id="name'.$produits_lies["eg_produit_id"].'" value="'.$produits_lies["eg_produit_nom"].'" />
 																<input type="hidden" name="hidden_price" id="price'.$produits_lies["eg_produit_id"].'" value="'.$produits_lies["eg_produit_prix"].'" />
-																<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits_lies["eg_produit_id"].'" class="form-control" value="1" />
-																<button  class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produits_lies["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" >
+																<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits_lies["eg_produit_id"].'" class="form-control-panier" value="1" />
+																<button  class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produits_lies["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');" >
 																	<i class="fa fa-cart-plus"></i> 
 																	<span class="hidden-xs">Ajouter au panier</span>
 																</button>
 																
-																<button class="wishlist" type="button" data-toggle="tooltip" title="Bientot disponible">
+																<button class="wishlist" type="button" data-toggle="tooltip" title="Bientot disponible" disabled>
 																	<i class="fa fa-heart"></i>
 																</button>
-																<button class="compare" type="button" data-toggle="tooltip" title="Bientot disponible" >
+																<button class="compare" type="button" data-toggle="tooltip" title="Bientot disponible" disabled>
 																	<i class="fa fa-exchange-alt"></i>
 																</button>
 															</div>

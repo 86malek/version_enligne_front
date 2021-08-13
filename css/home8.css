@@ -2404,6 +2404,7 @@ STRUCTURE
 .shopping_cart .shoppingcart-box .table-striped a {
   color: #666;
   font-weight: bold;
+  white-space: normal;
 }
 .shopping_cart .shoppingcart-box .table-striped a.fa-edit {
   display: none;
@@ -5888,12 +5889,12 @@ body {
 }
 .home8--banner1 .banner__img {
   width: 130px;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   float: left;
   overflow: hidden;
 }
 .home8--banner1 .banner__img img {
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 .home8--banner1 .banner__info {
   padding-left: 15px;
@@ -6027,7 +6028,7 @@ body {
   font-weight: bold;
   margin-left: 55px;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 0px;
   margin-bottom: 10px;
   line-height: 22px;
 }
