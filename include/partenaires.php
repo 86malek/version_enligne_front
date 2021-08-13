@@ -13,7 +13,7 @@
 										echo '
 
 											<div class="item">
-											<a href="#"><img src="https://betatest.expert-gaming.tn' . $partenaire['eg_marque_logo'] . '" alt="' . $partenaire['eg_marque_nom'] . '" class="img-responsive"></a>
+											<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?marque_id='.$partenaire['eg_marque_id'].'"><img src="https://betatest.expert-gaming.tn' . $partenaire['eg_marque_logo'] . '" alt="' . $partenaire['eg_marque_nom'] . '" class="img-responsive"></a>
 											</div>
 
 										';

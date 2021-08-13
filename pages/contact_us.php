@@ -75,7 +75,7 @@
 						<i class="fa fa-home"></i>
 					</a>
 				</li>
-				<li><a href="Nous_contacter">Nous contacter</a>
+				<li>Nous contacter
 			</li>			
 			</ul>
 			

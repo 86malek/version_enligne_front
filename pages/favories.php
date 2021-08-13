@@ -71,7 +71,7 @@
 		<div class="main-container container">
 			<ul class="breadcrumb">
 				<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="Liste_des_favoris">Mes favoris</a></li>
+				<li>Mes favoris</li>
 			</ul>
 			
 			<div class="row">

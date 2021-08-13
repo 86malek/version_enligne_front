@@ -65,7 +65,7 @@
   <div class="main-container container">
     	<ul class="breadcrumb">
 				<li><a href="../Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="Accueil">Actualités</a></li>
+				<li>Toutes les actualités</li>
 		</ul>
 		
 		<div class="row">			
