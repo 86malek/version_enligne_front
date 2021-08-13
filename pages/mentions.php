@@ -18,36 +18,36 @@
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href="ico/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon.png">
 
+	
 	<!-- Google web fonts
 	============================================ -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
-	<!-- font awesome
+	<!-- font-awesome
 	============================================ -->
 	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-
-	<!-- Libs CSS
+	
+    <!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="css/themecss/lib.css" rel="stylesheet">
-	<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
+	
 	<!-- Theme CSS
 	============================================ -->
-	<link href="css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="css/themecss/so-categories.css" rel="stylesheet">
+   	<link href="css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="css/themecss/so-categories.css" rel="stylesheet">
 	<link href="css/themecss/so-listing-tabs.css" rel="stylesheet">
 	<link href="css/header8.css" rel="stylesheet">
 	<link href="css/footer5.css" rel="stylesheet">
 	<link id="color_scheme" href="css/home8.css" rel="stylesheet">
 	<link id="color_scheme" href="css/home4.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
 	<link id="color_scheme" href="css/theme.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 
