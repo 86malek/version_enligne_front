@@ -146,7 +146,6 @@ session_start();
 								<form method="post" id="order_process_form" action="payment.php">
 									<div class="row">
 										<div class="col-md-6" style="border-right:1px solid #ddd;">
-											<h4>Détails du consommateur</h4>
 											<div class="row">
 												<div class="col-sm-12">
 													<label><b>Nom et Prénom *</b></label>
