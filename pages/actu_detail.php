@@ -16,7 +16,7 @@ $date = date_format($date, "d/m/Y");
 
 <head>
 
-  <title>Expert-Gaming | <?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?></title>
+  <title><?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?></title>
     <meta charset="utf-8">
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow" />

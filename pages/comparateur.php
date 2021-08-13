@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Comparateur</title>
+	<title>Comparateur</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />

@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Inscription</title>
+	<title>S'inscrire</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />

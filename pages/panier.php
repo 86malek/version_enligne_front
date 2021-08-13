@@ -45,7 +45,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Panier</title>
+	<title>Panier</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />

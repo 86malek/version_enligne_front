@@ -51,7 +51,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Produits en promo</title>
+	<title>Produits en promo</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
