@@ -89,8 +89,8 @@ $date = date_format($date, "d/m/Y");
 						<small><?php if(!empty($id_comm)){echo $communication['eg_comm_sous_titre'];}?></small>
 					</div>
 					<div class="article-sub-title">
-						<span class="article-author">Poster part : <a href="#"><?php echo Membre::info($communication['eg_comm_user'], 'nom').' '.Membre::info($communication['eg_comm_user'], 'prenom'); ?></a></span>
-						<span class="article-date">Date d'insertion : <?php echo $date;?></span>
+						<span class="article-author">Posté par : <a href="#"><b><?php echo Membre::info($communication['eg_comm_user'], 'nom').' '.Membre::info($communication['eg_comm_user'], 'prenom'); ?></b></a></span>
+						<span class="article-date">Date d'insertion : <b><?php echo $date;?></b></span>
 					</div>
 					<div class="form-group">
 						<a href="image/demo/blog/blog4.jpg" class="image-popup"><img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>"></a>
