@@ -120,7 +120,12 @@
 
 							<?php
 
-								include("include/actualites.php");
+								//include("include/actualites.php");
+
+							?>
+							<?php
+
+							include("include/news.php");
 
 							?>
 							

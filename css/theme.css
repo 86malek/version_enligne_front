@@ -3423,8 +3423,18 @@ input[type="color"].form-control {
   border-radius: 0;
 }
 
-input[type="number"].form-control {
-  margin-bottom: 10px;
+input[type="number"].form-control-panier {
+  width: 50px;
+  position: relative;
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #444;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0px 7px;
+    display: inline-block;
+    height: 38px;
 } 
 
 
@@ -4229,7 +4239,9 @@ h2.title-category {
 }
 
 .label-new,
-.label-sale {
+.label-sale,
+.label-new-produits,
+.label-sale-produits {
   font-size: 12px;
   height: 30px;
   padding: 3px 10px;
@@ -4282,6 +4294,54 @@ h2.title-category {
   bottom: -6px;
   right: 8px;
 }
+
+
+
+
+.label-sale-produits {
+  background: #e74c3c;
+  top: 0px;
+  left: 0px;
+}
+.label-sale-produits:after {
+  content: "";
+  border-top: 9px solid #e74c3c;
+  border-left: 8px solid transparent;
+  position: absolute;
+  bottom: -6px;
+  right: 8px;
+}
+
+.label-new-produits {
+  background: #00abf0;
+  top: 0px;
+  right: 0px;
+}
+.label-new-produits:after {
+  content: "";
+  border-top: 9px solid #00abf0;
+  border-right: 8px solid transparent;
+  position: absolute;
+  bottom: -6px;
+  right: 8px;
+}
+.label-dispo-produits {
+  background: #0dd34f;
+  top: 0px;
+  right: 0px;
+}
+.label-dispo-produits:after {
+  content: "";
+  border-top: 9px solid #0dd34f;
+  border-right: 8px solid transparent;
+  position: absolute;
+  bottom: -6px;
+  right: 8px;
+}
+
+
+
+
 
 .label-percent {
   padding: 2px 5px;
@@ -4620,7 +4680,7 @@ div.tab-slider
   .grid.ltabs-items
   .product-layout
   .product-item-container {
-  min-height: 490px !important;
+  min-height: 534px !important;
   margin: 15px 0;
   padding: 15px;
   border: 1px solid #dddddd;

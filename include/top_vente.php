@@ -151,20 +151,19 @@
 										<div class="button-group">
 										';
 										
-										if($produit_top_vente['eg_produit_dispo'] == 0){
+										if($produit_top_vente['eg_produit_dispo'] == 0 || $cartes_graphiques['eg_produit_dispo'] == 4){
 
 											echo'
 											
-											<input type="number" id="" class="form-control" value="1" disabled/>
-											<button class="addToCart add_to_cart" type="button"  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>';
+											';
 											
 										}else{
 
 											echo'
 											<input type="hidden" name="hidden_name" id="name'.$produit_top_vente["eg_produit_id"].'" value="'.$produit_top_vente["eg_produit_nom"].'" />
              								<input type="hidden" name="hidden_price" id="price'.$produit_top_vente["eg_produit_id"].'" value="'.$produit_top_vente["eg_produit_prix"].'" />
-											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_top_vente["eg_produit_id"].'" class="form-control" value="1" />
-											<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produit_top_vente["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_top_vente["eg_produit_id"].'" class="form-control-panier" value="1" />
+											<button class="addToCart  addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produit_top_vente["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										echo'
