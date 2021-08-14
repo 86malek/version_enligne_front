@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert Gaming | Mon compte</title>
+	<title>Mon compte</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -73,7 +73,7 @@
 		<div class="main-container container">
 			<ul class="breadcrumb">
 				<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="Mon_compte">Mon compte</a></li>
+				<li>Mon compte</li>
 			</ul>
 			
 			<div class="row">

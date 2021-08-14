@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | À propos de nous</title>
+	<title>À propos de nous</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -71,7 +71,7 @@
 		<div class="main-container container">
 			<ul class="breadcrumb">
 				<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="Liste_des_favoris">Mes favoris</a></li>
+				<li>Mes favoris</li>
 			</ul>
 			
 			<div class="row">

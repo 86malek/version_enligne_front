@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | S'identifier</title>
+	<title>S'identifier</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -74,7 +74,7 @@
 		<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-			<li><a href="Identification">S'identifier</a></li>
+			<li>S'identifier</li>
 		</ul>
 		
 		<div class="row">

@@ -38,7 +38,7 @@
 				
 				<!-- Search -->
 				<div id="sosearchpro" class="col-md-7 col-sm-7 search-pro">
-					<form method="POST" action="//<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/recherche.php">
+					<form method="POST" action="//<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>Recherche">
 						<div id="search0" class="search input-group">
 							<div class="select_category filter_type icon-select">
 								<select class="no-border" name="categorieid">
@@ -117,7 +117,7 @@
 									<div>										
 										<p class="text-right">								
 											<a class="btn btn-sm" href="#" id="clear_cart"><i class="fa fa-shopping-cart"></i>Vider le panier</a>
-											<a class="btn btn-sm" href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/info_commande.php"><i class="fa fa-share"></i>Commander</a>
+											<a class="btn btn-sm" href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>Commande"><i class="fa fa-share"></i>Commander</a>
 										</p>
 
 									</div>
@@ -130,9 +130,9 @@
 						<?php
 						}
 						?>
-</li>
+						</li>
 								
-							</ul>
+						</ul>
 							
 					</div>
 					
@@ -215,7 +215,7 @@
 																	
 
 															<li class="">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/promo.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/Produit/'.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -227,7 +227,7 @@
 																	
 
 															<li class="">
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/Produit/'.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -257,7 +257,7 @@
 
 															<li class="with-sub-menu hover">
 															<p class="close-menu"></p>
-															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?menu_id='.$menu['eg_menu_id'].'" class="clearfix">
+															<a href="https://'.$_SERVER['SERVER_NAME'].'/Produit/'.$menu['eg_menu_id'].'" class="clearfix">
 
 															<strong>' . $menu['eg_menu_titre'] . '</strong>
 
@@ -304,7 +304,7 @@
 																		<div class="col-md-3">
 																			<div class="column">
 
-																				<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?cat_id='.$categorie['eg_categorie_id'].'" class="title-submenu">'.$categorie['eg_categorie_nom'].'</a>
+																				<a href="https://'.$_SERVER['SERVER_NAME'].'/Produit/cat/'.$categorie['eg_categorie_id'].'" class="title-submenu">'.$categorie['eg_categorie_nom'].'</a>
 
 																				<div>
 																					<ul class="row-list">
@@ -323,7 +323,7 @@
 																echo '
 																						<li>
 																						
-																						<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?sous_cat_id='.$sous_categorie['eg_sous_categorie_id'].'">'.$sous_categorie['eg_sous_categorie_nom'].'</a>
+																						<a href="https://'.$_SERVER['SERVER_NAME'].'/Produit/scat/'.$sous_categorie['eg_sous_categorie_id'].'">'.$sous_categorie['eg_sous_categorie_nom'].'</a>
 
 																						</li>
 
@@ -366,7 +366,7 @@
 													
 													<li class="hidden-md">
 														<p class="close-menu"></p>
-														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php" class="clearfix">
+														<a href="https://<?php echo $_SERVER['SERVER_NAME']?>/Promotions" class="clearfix">
 															<strong>Promotions</strong>
 															
 														</a>

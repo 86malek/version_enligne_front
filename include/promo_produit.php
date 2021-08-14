@@ -42,12 +42,12 @@
 
 										echo '
 										<!--full quick view block-->
-										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="pages/quickview.php?produit_id='.$produit_promo['eg_produit_id'].'">Aperçu rapide</a>
+										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Quickview/'.$produit_promo['eg_produit_id'].'">Aperçu rapide</a>
 										<!--end full quick view block-->
 									</div>
 									<div class="right-block">
 										<div class="caption">
-											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produit_promo['eg_produit_id'].'">';
+											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$produit_promo['eg_produit_id'].'">';
 																		$text = wordwrap($produit_promo['eg_produit_nom'], 50, "***", true); // insertion de marqueurs ***
 
 																		$tcut = explode("***", $text); // on créé un tableau à partir des marqueurs ***
@@ -140,20 +140,19 @@
 										
 										<div class="button-group">
 										';
-										if($produit_promo['eg_produit_dispo'] == 0){
+										if($produit_promo['eg_produit_dispo'] == 0 || $produit_promo['eg_produit_dispo'] == 4){
 
 											echo'
 											
-											<input type="number" id="" class="form-control" value="1" disabled/>
-											<button class="addToCart add_to_cart" type="button"  disabled><i class="fas fa-exclamation-triangle"></i> <span class="button-group__text">Hors stock</span></button>';
+											';
 
 										}else{
 
 											echo'
 											<input type="hidden" name="hidden_name" id="name'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_nom"].'" />
              								<input type="hidden" name="hidden_price" id="price'.$produit_promo["eg_produit_id"].'" value="'.$produit_promo["eg_produit_promo"].'" />
-											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_promo["eg_produit_id"].'" class="form-control" value="1" />
-											<button class="addToCart add_to_cart" type="button" name="add_to_cart" id="'.$produit_promo["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
+											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produit_promo["eg_produit_id"].'" class="form-control-panier" value="1" />
+											<button class="addToCart  addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produit_promo["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
 										

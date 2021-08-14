@@ -1,6 +1,148 @@
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^betatestfront\.expert\-gaming\.tn$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.betatestfront\.expert\-gaming\.tn$
+
 RewriteRule ^Contact$  pages/contact_us.php  [L]
 RewriteRule ^A_propos_de_nous$  pages/about_us.php  [L]
 RewriteRule ^Mentions_legales$  pages/mentions.php  [L]
+RewriteRule ^Commande$  pages/info_commande.php  [L]
+RewriteRule ^Paiement$  pages/payment.php  [L]
+
+
+RewriteRule ^Actualites$  pages/actu.php  [L]
+RewriteRule ^Actualites/([0-9]*)$ pages/actu_detail.php?id_actu=$1  [L]
+
+
+RewriteRule ^Produits$  pages/products.php [L]
+RewriteRule ^Produit/P/([0-9]*)$ pages/products.php?page=$1  [L]
+
+RewriteRule ^Produit/ASC/([0-9]*)$ pages/products.php?asc_prix=$1  [L]
+RewriteRule ^Produit/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?asc_prix=$1&page=$2  [L]
+RewriteRule ^Produit/DESC/([0-9]*)$ pages/products.php?desc_prix=$1  [L]
+RewriteRule ^Produit/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?desc_prix=$1&page=$2  [L]
+RewriteRule ^Produit/ASCN/([0-9]*)$ pages/products.php?asc_nom=$1  [L]
+RewriteRule ^Produit/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?asc_nom=$1&page=$2  [L]
+RewriteRule ^Produit/DESCN/([0-9]*)$ pages/products.php?desc_nom=$1  [L]
+RewriteRule ^Produit/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?desc_nom=$1&page=$2  [L]
+
+
+
+
+
+RewriteRule ^Produit/([0-9]*)$ pages/products.php?menu_id=$1  [L]
+RewriteRule ^Produit/([0-9]*)/P/([0-9]*)$ pages/products.php?menu_id=$1&page=$2  [L]
+
+RewriteRule ^Produit/([0-9]*)/ASC/([0-9]*)$ pages/products.php?menu_id=$1&asc_prix=$2  [L]
+RewriteRule ^Produit/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?menu_id=$1&asc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/([0-9]*)/DESC/([0-9]*)$ pages/products.php?menu_id=$1&desc_prix=$2  [L]
+RewriteRule ^Produit/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?menu_id=$1&desc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?menu_id=$1&asc_nom=$2  [L]
+RewriteRule ^Produit/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?menu_id=$1&asc_nom=$2&page=$3  [L]
+RewriteRule ^Produit/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?menu_id=$1&desc_nom=$2  [L]
+RewriteRule ^Produit/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?menu_id=$1&desc_nom=$2&page=$3  [L]
+
+
+
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&page=$3  [L]
+
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&asc_prix=$3  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&asc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&desc_prix=$3  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&desc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&asc_nom=$3  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&asc_nom=$3&page=$4  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&desc_nom=$3  [L]
+RewriteRule ^Produit/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&menu_id=$2&desc_nom=$3&page=$4  [L]
+
+
+
+RewriteRule ^Produit/cat/([0-9]*)$ pages/products.php?cat_id=$1  [L]
+RewriteRule ^Produit/cat/([0-9]*)/P/([0-9]*)$ pages/products.php?cat_id=$1&page=$2  [L]
+
+RewriteRule ^Produit/cat/([0-9]*)/ASC/([0-9]*)$ pages/products.php?cat_id=$1&asc_prix=$2  [L]
+RewriteRule ^Produit/cat/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?cat_id=$1&asc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/DESC/([0-9]*)$ pages/products.php?cat_id=$1&desc_prix=$2  [L]
+RewriteRule ^Produit/cat/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?cat_id=$1&desc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?cat_id=$1&asc_nom=$2  [L]
+RewriteRule ^Produit/cat/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?cat_id=$1&asc_nom=$2&page=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?cat_id=$1&desc_nom=$2  [L]
+RewriteRule ^Produit/cat/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?cat_id=$1&desc_nom=$2&page=$3  [L]
+
+
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&page=$3  [L]
+
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&asc_prix=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&asc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&desc_prix=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&desc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&asc_nom=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&asc_nom=$3&page=$4  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&desc_nom=$3  [L]
+RewriteRule ^Produit/cat/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&cat_id=$2&desc_nom=$3&page=$4  [L]
+
+
+
+
+
+
+RewriteRule ^Produit/scat/([0-9]*)$ pages/products.php?sous_cat_id=$1  [L]
+RewriteRule ^Produit/scat/([0-9]*)/P/([0-9]*)$ pages/products.php?sous_cat_id=$1&page=$2  [L]
+
+RewriteRule ^Produit/scat/([0-9]*)/ASC/([0-9]*)$ pages/products.php?sous_cat_id=$1&asc_prix=$2  [L]
+RewriteRule ^Produit/scat/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?sous_cat_id=$1&asc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/DESC/([0-9]*)$ pages/products.php?sous_cat_id=$1&desc_prix=$2  [L]
+RewriteRule ^Produit/scat/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?sous_cat_id=$1&desc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?sous_cat_id=$1&asc_nom=$2  [L]
+RewriteRule ^Produit/scat/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?sous_cat_id=$1&asc_nom=$2&page=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?sous_cat_id=$1&desc_nom=$2  [L]
+RewriteRule ^Produit/scat/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?sous_cat_id=$1&desc_nom=$2&page=$3  [L]
+
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&page=$3  [L]
+
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&asc_prix=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&asc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&desc_prix=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&desc_prix=$3&page=$4  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&asc_nom=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&asc_nom=$3&page=$4  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&desc_nom=$3  [L]
+RewriteRule ^Produit/scat/([0-9]*)/Marque/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&sous_cat_id=$2&desc_nom=$3&page=$4  [L]
+
+
+RewriteRule ^Produit/Marque/([0-9]*)$ pages/products.php?marque_id=$1  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&page=$2  [L]
+
+RewriteRule ^Produit/Marque/([0-9]*)/ASC/([0-9]*)$ pages/products.php?marque_id=$1&asc_prix=$2  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/ASC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&asc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/DESC/([0-9]*)$ pages/products.php?marque_id=$1&desc_prix=$2  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/DESC/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&desc_prix=$2&page=$3  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/ASCN/([0-9]*)$ pages/products.php?marque_id=$1&asc_nom=$2  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/ASCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&asc_nom=$2&page=$3  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/DESCN/([0-9]*)$ pages/products.php?marque_id=$1&desc_nom=$2  [L]
+RewriteRule ^Produit/Marque/([0-9]*)/DESCN/([0-9]*)/P/([0-9]*)$ pages/products.php?marque_id=$1&desc_nom=$2&page=$3  [L]
+
+
+
+
+RewriteRule ^Promotions$  pages/promo.php  [L]
+RewriteRule ^Promotions/P/([0-9]*)$ pages/promo.php?page=$1  [L]
+RewriteRule ^Promotions/ASCN/([0-9]*)$ pages/promo.php?asc_nom=$1  [L]
+RewriteRule ^Promotions/ASCN/([0-9]*)/P/([0-9]*)$ pages/promo.php?asc_nom=$1&page=$2  [L]
+RewriteRule ^Promotions/DESCN/([0-9]*)$ pages/promo.php?desc_nom=$1  [L]
+RewriteRule ^Promotions/DESCN/([0-9]*)/P/([0-9]*)$ pages/promo.php?desc_nom=$1&page=$2  [L]
+RewriteRule ^Promotions/ASC/([0-9]*)$ pages/promo.php?asc_prix=$1  [L]
+RewriteRule ^Promotions/ASC/([0-9]*)/P/([0-9]*)$ pages/promo.php?asc_prix=$1&page=$2  [L]
+RewriteRule ^Promotions/DESC/([0-9]*)$ pages/promo.php?desc_prix=$1  [L]
+RewriteRule ^Promotions/DESC/([0-9]*)/P/([0-9]*)$ pages/promo.php?desc_prix=$1&page=$2  [L]
+
+
+
+
+
+RewriteRule ^Recherche$  pages/recherche.php  [L]
+
+RewriteRule ^ProduitDetails/([0-9]*)$ pages/product_view.php?produit_id=$1  [L]
+RewriteRule ^Quickview/([0-9]*)$ pages/quickview.php?produit_id=$1  [L]

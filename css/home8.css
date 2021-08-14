@@ -5889,12 +5889,12 @@ body {
 }
 .home8--banner1 .banner__img {
   width: 130px;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   float: left;
   overflow: hidden;
 }
 .home8--banner1 .banner__img img {
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 .home8--banner1 .banner__info {
   padding-left: 15px;

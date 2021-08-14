@@ -16,7 +16,7 @@ $date = date_format($date, "d/m/Y");
 
 <head>
 
-  <title>Expert-Gaming | <?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?></title>
+  <title><?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?></title>
     <meta charset="utf-8">
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow" />
@@ -75,8 +75,8 @@ $date = date_format($date, "d/m/Y");
 	<div class="main-container container">
 		<ul class="breadcrumb">
 					<li><i class="fa fa-home"></i></li>
-					<li><a href="actu.php">Actualités</a></li>
-					<li>Details actualité</li>
+					<li><a href="actu.php">Toutes les actualités</a></li>
+					<li>Lire l'article</li>
 		</ul>
 			
 		<div class="row">
@@ -89,11 +89,11 @@ $date = date_format($date, "d/m/Y");
 						<small><?php if(!empty($id_comm)){echo $communication['eg_comm_sous_titre'];}?></small>
 					</div>
 					<div class="article-sub-title">
-						<span class="article-author">Poster part : <a href="#"><?php echo Membre::info($communication['eg_comm_user'], 'nom').' '.Membre::info($communication['eg_comm_user'], 'prenom'); ?></a></span>
-						<span class="article-date">Date d'insertion : <?php echo $date;?></span>
+						<span class="article-author">Posté par : <a href="#"><b><?php echo Membre::info($communication['eg_comm_user'], 'nom').' '.Membre::info($communication['eg_comm_user'], 'prenom'); ?></b></a></span>
+						<span class="article-date">Date d'insertion : <b><?php echo $date;?></b></span>
 					</div>
 					<div class="form-group">
-						<a href="image/demo/blog/blog4.jpg" class="image-popup"><img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>"></a>
+						<img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>">
 					</div>
 					<hr>
 					<div class="article-description">

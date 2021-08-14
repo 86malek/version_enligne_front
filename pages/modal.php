@@ -5,7 +5,7 @@
     
      <!-- Basic page needs
 	============================================ -->
-	 <title>Expert-Gaming | Modal configurateur</title>
+	 <title>Modal configurateur</title>
 	 <meta charset="utf-8" />
      <meta name="keywords" content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business" />
      <meta name="author" content="Magentech" />

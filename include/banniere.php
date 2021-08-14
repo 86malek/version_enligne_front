@@ -15,7 +15,7 @@
 							echo '
 
 								<div class="item">
-								<a href="' . $banniere['eg_banniere_lien'] . '" target="_blank"><img src="https://betatest.expert-gaming.tn' . $banniere['eg_banniere_image'] . '" alt="' . $banniere['eg_banniere_nom'] . '" class="img-responsive"></a>
+								<a href="' . $banniere['eg_banniere_lien'] . '"><img src="https://betatest.expert-gaming.tn' . $banniere['eg_banniere_image'] . '" alt="' . $banniere['eg_banniere_nom'] . '" class="img-responsive"></a>
 								</div>
 					
 							';

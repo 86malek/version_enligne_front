@@ -1,5 +1,5 @@
 <head>
-    <title>Expert-Gaming | 404</title>
+    <title>404</title>
     <meta charset="utf-8">
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow" />

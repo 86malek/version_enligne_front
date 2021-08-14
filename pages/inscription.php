@@ -7,7 +7,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Expert-Gaming | Inscription</title>
+	<title>S'inscrire</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -73,7 +73,7 @@
 		<div class="main-container container">
 			<ul class="breadcrumb">
 				<li><a href="Accueil"><i class="fa fa-home"></i></a></li>
-				<li><a href="Inscription">S'inscrire</a></li>
+				<li>S'inscrire</li>
 			</ul>
 			
 			<div class="row">

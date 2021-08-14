@@ -8,7 +8,7 @@
 <head>
     <!-- Basic page needs
 	============================================ -->
-	<title>Expert Gaming | Accueil</title>
+	<title>Expert Gaming</title>
 	<meta charset="utf-8">
     <meta name="keywords" content="Expert Gaming, Vente Pc Gamer, Carte Graphique, Processeur en Tunisie, Vente Pc Gamer et accessoires en Tunisie" />
     <meta name="robots" content="index, follow" />
@@ -66,6 +66,15 @@
 		background: url(image/loader/Preloader_1.gif) center no-repeat #010002;
 	}
 	</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-67Y3GRQNQT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-67Y3GRQNQT');
+	</script>
 		
 
 </head>
@@ -120,7 +129,12 @@
 
 							<?php
 
-								include("include/actualites.php");
+								//include("include/actualites.php");
+
+							?>
+							<?php
+
+							include("include/news.php");
 
 							?>
 							
@@ -193,6 +207,6 @@
 <script type="text/javascript" src="js/themejs/application.js"></script>
 <script type="text/javascript" src="js/themejs/homepage.js"></script>
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 </body>
 </html>
