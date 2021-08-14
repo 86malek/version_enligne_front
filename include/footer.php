@@ -52,9 +52,12 @@
 								<a title="Facebook" href="https://www.facebook.com/expertgamingtunisie" target="_blank"> 
 									<span class="fab fa-facebook fa- social-icon"></span> 
 								</a>
-								<a title="Youtube" href="#" target="_blank"> 
+								<!-- <a title="Youtube" href="#" target="_blank"> 
 									<span class="fab fa-youtube fa- social-icon"></span> 
-								</a>	
+								</a>	 -->
+								<a title="instagram" href="#" target="_blank"> 
+									<span class="fab fa-youtube fa- social-icon"></span> 
+								</a>
 							</div>
 
 						</div>

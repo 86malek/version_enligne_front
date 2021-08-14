@@ -83,7 +83,8 @@
 								</select>
 							</div>
 
-							<input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Saisissez des mots clés à rechercher ..." name="recherche">
+							<input type="text" id="search_data" placeholder="Saisissez des mots clés à rechercher ..." autocomplete="off" class="autosearch-input form-control" size="50"  name="recherche" />
+
 							<span class="input-group-btn">
 							<button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
 							</span>
@@ -373,7 +374,7 @@
 													</li>
 													
 													<li class="pull-right">
-														<a href="Configurateur"><strong>configurateur</strong>
+														<a><strong>configurateur</strong>
 															<!-- <img class="label-hot" src="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site;?>image/theme/icons/hot-icon.png" alt="icon items"> -->
 															<span class="tooltips"><strong>Coming soon</strong></span>
 														</a>
