@@ -97,7 +97,7 @@
 									<b>Directeur de la publication</b> : Hedi JMEL<br><br>
 									<b>Co-fondateur</b> : Zied GROMBALI<br><br>
 
-									<b>Numéros d'appel</b> (standard du siège social) : Téléphone : +216 58 554 255  du lundi au vendredi de 9h00 à 12h30 et de 13h45 à 18h 
+									<b>Numéro d'appel</b> (standard du siège social) : Téléphone : +216 58 554 255  du lundi au vendredi de 9h00 à 12h30 et de 13h45 à 18h 
 								</div>
 
 							</div>
@@ -108,7 +108,7 @@
 							<div class="col-lg-12 col-md-12 what-client-say">
 								<div class="client-say-content">
 									<h2 class="about-title line-hori">
-										<span>Responsables technique du site</span>
+										<span>Responsables techniques du site</span>
 									</h2>
 									<div class="about-text">
                                 	<b>Développeurs</b> : Mohamed Inaam RACHDI et Malek MENCHAOUI<br><br>

@@ -93,7 +93,7 @@ $date = date_format($date, "d/m/Y");
 						<span class="article-date">Date d'insertion : <b><?php echo $date;?></b></span>
 					</div>
 					<div class="form-group">
-						<a href="image/demo/blog/blog4.jpg" class="image-popup"><img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>"></a>
+						<img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>">
 					</div>
 					<hr>
 					<div class="article-description">

@@ -143,7 +143,7 @@ session_start();
 						<div class="panel panel-default">
 							<div class="panel-heading">Validation de la commande</div>
 							<div class="panel-body">
-								<form method="post" id="order_process_form" action="payment.php">
+								<form method="post" id="order_process_form" action="https://expert-gaming.tn/Paiement">
 									<div class="row">
 										<div class="col-md-6" style="border-right:1px solid #ddd;">
 											<div class="row">

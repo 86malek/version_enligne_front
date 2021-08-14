@@ -66,6 +66,15 @@
 		background: url(image/loader/Preloader_1.gif) center no-repeat #010002;
 	}
 	</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-67Y3GRQNQT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-67Y3GRQNQT');
+	</script>
 		
 
 </head>
@@ -198,6 +207,6 @@
 <script type="text/javascript" src="js/themejs/application.js"></script>
 <script type="text/javascript" src="js/themejs/homepage.js"></script>
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 </body>
 </html>

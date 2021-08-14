@@ -74,7 +74,7 @@ $captcha_error = 'Captcha est obligatoire.';
 }
 else
 {
-$secret_key = '6Ldv2bcUAAAAAFXUKdLW_qljFd9FpxNguf06DHhp';
+$secret_key = '6Lcmj_UbAAAAAKDbibUwNnouH7RUvBAEhymFnPS4';
 
 if($first_name_error == '' && $phonenum_error == '' && $email_error == '' && $msg_error == '' && $tel_error == '' && $captcha_error == '')
 {

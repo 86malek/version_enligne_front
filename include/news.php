@@ -16,7 +16,7 @@
                                                             <div class="item-post">
                                                             <div class="banners image-blog">
                                                                 <div>
-                                                                    <a title="' . $nouvelle_actualite['eg_comm_titre'] . '" href="pages/actu_detail.php?id_actu='.$nouvelle_actualite['eg_comm_id'].'">
+                                                                    <a title="' . $nouvelle_actualite['eg_comm_titre'] . '" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Actualites/'.$nouvelle_actualite['eg_comm_id'].'">
                                                                         <img src="https://betatest.expert-gaming.tn' . $nouvelle_actualite['eg_comm_img'] . '" alt="' . $nouvelle_actualite['eg_comm_titre'] . '">
                                                                     </a>
                                                                 </div>
@@ -27,7 +27,7 @@
                                                                         <div class="day">' . $nouvelle_actualite['eg_comm_jour'] . '</div>
                                                                         <div class="month">' . $nouvelle_actualite['eg_comm_mois'] . '</div>
                                                                     </div>
-                                                                    <h2 class="postTitle"><a href="pages/actu_detail.php?id_actu='.$nouvelle_actualite['eg_comm_id'].'">' . $nouvelle_actualite['eg_comm_titre'] . '</a></h2>
+                                                                    <h2 class="postTitle"><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Actualites/'.$nouvelle_actualite['eg_comm_id'].'">' . $nouvelle_actualite['eg_comm_titre'] . '</a></h2>
                                                                 </div>
                                                                 <div class="postContent">' . $nouvelle_actualite['eg_comm_sous_titre'] . '</div>
                                                             </div>

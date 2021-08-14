@@ -27,26 +27,26 @@
 	
      <!-- Libs CSS
 	============================================ -->
-     <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	 <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	 <link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-     <link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet" />
-	 <link href="../css/themecss/lib.css" rel="stylesheet" />
-	 <link href="../js/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+     <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+     <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/lib.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
 	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	
 	 <!-- Theme CSS
 	============================================ -->
-   	 <link href="../css/themecss/so_megamenu.css" rel="stylesheet" />
-     <link href="../css/themecss/so-categories.css" rel="stylesheet" />
-	 <link href="../css/themecss/so-listing-tabs.css" rel="stylesheet" />
-	 <link href="../css/footer1.css" rel="stylesheet">
-	 <link href="../css/header1.css" rel="stylesheet">
-	 <link href="../css/theme.css" rel="stylesheet" id="color_scheme" />
-	 <link id="color_scheme" href="../css/home8.css" rel="stylesheet">
-	 <link id="color_scheme" href="../css/home4.css" rel="stylesheet">
-	 <link id="color_scheme" href="../css/theme.css" rel="stylesheet">
-	 <link href="../css/responsive.css" rel="stylesheet"/>
+   	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so_megamenu.css" rel="stylesheet" />
+     <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-categories.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-listing-tabs.css" rel="stylesheet" />
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/footer1.css" rel="stylesheet">
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/header1.css" rel="stylesheet">
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/theme.css" rel="stylesheet" id="color_scheme" />
+	 <link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home8.css" rel="stylesheet">
+	 <link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home4.css" rel="stylesheet">
+	 <link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/theme.css" rel="stylesheet">
+	 <link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/responsive.css" rel="stylesheet"/>
 	
    
 	
@@ -385,24 +385,24 @@
  <!-- Include Libs & Plugins
 	============================================ -->
  <!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="../js/themejs/libs.js"></script>
-	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/modernizr/modernizr-2.6.2.min.js"></script>
 
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
-	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/application.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/so_megamenu.js"></script>
  	<script>
 		// Get the modal
 		var modal = document.getElementById("myModal");

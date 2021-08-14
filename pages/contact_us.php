@@ -18,7 +18,7 @@
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href=../ico/favicon.png">
+	<link rel="shortcut icon" href="../ico/favicon.png">
 
 	<!-- Google web fonts
 	============================================ -->
@@ -177,7 +177,7 @@
 										</div>
 										<div class="form-group required">
 										<div class="pull-right">
-											<div class="g-recaptcha" data-sitekey="6Ldv2bcUAAAAAFeYuQAQWH7I_BVv2_2_vvmn2Fpp"></div>
+											<div class="g-recaptcha" data-sitekey="6Lcmj_UbAAAAAIoUhn8fBBYLX0ZdBszd5r1GqFuU"></div>
 											<span id="captcha_error" class="text-danger"></span>
 											</div>
 										</div>

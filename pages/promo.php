@@ -51,7 +51,7 @@
 <head>
 	<!-- Basic page needs
 	============================================ -->
-	<title>Produits en promo</title>
+	<title>Produits en promotion</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
 	<meta name="robots" content="index, follow" />
@@ -62,7 +62,7 @@
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href="../ico/favicon.png">
+	<link rel="shortcut icon" href="https://<?php echo $_SERVER['SERVER_NAME']?>/ico/favicon.png">
 
 	<!-- Google web fonts
 	============================================ -->
@@ -70,29 +70,29 @@
 
 	<!-- font awesome
 	============================================ -->
-	<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
-	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="../css/themecss/lib.css" rel="stylesheet">
-	<link href="../js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/bootstrap/css/bootstrap.css">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/lib.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 	<!-- Theme CSS
 	============================================ -->
-	<link href="../css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="../css/themecss/so-categories.css" rel="stylesheet">
-	<link href="../css/themecss/so-listing-tabs.css" rel="stylesheet">
-	<link href="../css/header8.css" rel="stylesheet">
-	<link href="../css/footer5.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home8.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
-	<link href="../css/responsive.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so_megamenu.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-categories.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-listing-tabs.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/header8.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/footer5.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home8.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home4.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/responsive.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/theme.css" rel="stylesheet">
 
 
 </head>
@@ -567,19 +567,19 @@
 									?>
 
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?asc_nom=1" class="cutom-parent">Nom (A - Z)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>Promotions/ASCN/1" class="cutom-parent">Nom (A - Z)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?desc_nom=1" class="cutom-parent">Nom (Z - A)</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>Promotions/DESC/1" class="cutom-parent">Nom (Z - A)</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?asc_prix=1" class="cutom-parent">Prix croissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>Promotions/ASCN/1" class="cutom-parent">Prix croissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 											<li class="">
-												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>pages/promo.php?desc_prix=1" class="cutom-parent">Prix décroissant</a>
+												<a href="https://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo $PARAM_url_non_doc_site;?>Promotions/DESCN/1" class="cutom-parent">Prix décroissant</a>
 												<span class="dcjq-icon"></span>
 											</li>
 
@@ -608,7 +608,7 @@
 
 											echo '
 
-												<div class="product-latest-item">
+												<div class="product-latest-item hidden-xs">
 													<div class="media">
 														<div class="media-left">
 															<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits_recents['eg_produit_id'].'">
@@ -2017,7 +2017,7 @@
 											$PDO_query_nbProduits->closeCursor();
 											
 											// On détermine le nombre d'articles par page
-											$parPage = 9;
+											$parPage = 3;
 											
 											// On calcule le nombre de pages total
 											$pages = ceil($nbProduits / $parPage);
@@ -2073,7 +2073,7 @@
 
 																echo'
 																		<!--full quick view block-->
-																		<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="quickview.php?produit_id='.$produits['eg_produit_id'].'">Aperçu rapide</a>
+																		<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Quickview/'.$produits['eg_produit_id'].'">Aperçu rapide</a>
 																		<!--end full quick view block-->
 																	</div>
 																';
@@ -2085,7 +2085,7 @@
 																echo'
 																		<div class="right-block">
 																		<div class="caption">
-																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
+																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$produits['eg_produit_id'].'">';
 																			
 																			
 																			$text = wordwrap($produits['eg_produit_nom'], 80, "***", true); // insertion de marqueurs ***
@@ -2245,28 +2245,26 @@
 								<ul class="pagination">
 											<?php 
 											$chaine = $_SERVER['REQUEST_URI'];
-											$mot = "page=";
+											$mot = "/P/";
 
 											if(strpos($chaine, $mot) !== false){
-												$nbr = 7;
+												$nbr = 4;
 												$lien = substr($chaine, 0, -$nbr);
 											}else{
 
 												$lien = $_SERVER['REQUEST_URI'];
 											}
-											?>											
+											?>
 											<li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-												<a href="<?php echo $lien;?>&page=<?= $currentPage - 1 ?>" class="page-link"><</a>
+												<a href="<?php echo $lien;?>/P/<?= $currentPage - 1 ?>" class="page-link"><</a>
 											</li>
 											<?php for($page = 1; $page <= $pages; $page++): ?>
-												<!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
 												<li class="page-item <?= ($currentPage == $page) ? "active" : "" ?>">
-													<a href="<?php echo $lien;?>&page=<?= $page ?>" class="page-link"><?= $page ?></a>
+													<a href="<?php echo $lien;?>/P/<?= $page ?>" class="page-link"><?= $page ?></a>
 												</li>
 											<?php endfor ?>
-												<!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
 												<li class="page-item <?= ($currentPage == $pages) ? "disabled" : "" ?>">
-												<a href="<?php echo $lien;?>&page=<?= $currentPage + 1 ?>" class="page-link">></a>
+												<a href="<?php echo $lien;?>/P/<?= $currentPage + 1 ?>" class="page-link">></a>
 											</li>
 										</ul>
 								</div>
@@ -2296,24 +2294,24 @@
 	<!-- Include Libs & Plugins
 ============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="../js/themejs/libs.js"></script>
-	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/modernizr/modernizr-2.6.2.min.js"></script>
 
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
-	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/application.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/so_megamenu.js"></script>
 	<script>
 		// Check if Cookie exists
 		if ($.cookie('display')) {

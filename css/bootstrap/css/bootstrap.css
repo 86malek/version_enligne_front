@@ -4800,9 +4800,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 3;
-  color: #23527c;
-  background-color: #eee;
-  border-color: #ddd;
+  color: #f7bb11;
+  background-color: #191919;
+  border-color: #191919;
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -4811,10 +4811,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #fff;
+  color: #191919;
   cursor: default;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #f7bb11;
+  border-color: #f7bb11;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
