@@ -1,8 +1,7 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^betatestfront\.expert\-gaming\.tn$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.betatestfront\.expert\-gaming\.tn$
-
-RewriteRule ^Contact$  pages/contact_us.php  [L]
+RewriteCond %{HTTP_HOST} ^expert\-gaming\.tn$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.expert\-gaming\.tn$
+RewriteRule ^Contact$ "pages/contact_us.php" [L]
 RewriteRule ^A_propos_de_nous$  pages/about_us.php  [L]
 RewriteRule ^Mentions_legales$  pages/mentions.php  [L]
 RewriteRule ^Commande$  pages/info_commande.php  [L]

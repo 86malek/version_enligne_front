@@ -102,7 +102,7 @@ $captcha_error = 'Échec de la vérification du captcha. Rafraîchir la page pou
 		$mail->SMTPSecure = '';							//Sets connection prefix. Options are "", "ssl" or "tls"
 		$mail->From = $email;					//Sets the From email address for the message
 		$mail->FromName = $first_name.' '.$last_name;				//Sets the From name of the message
-		$mail->AddAddress('abc@xyz.com', 'Name');		//Adds a "To" address
+		$mail->AddAddress('inaam.rach@gmail.com', 'Expert Gaming');		//Adds a "To" address
 		$mail->IsHTML(false);							//Sets message type to HTML				
 		$mail->Subject = $subject;				//Sets the Subject of the message
 		$mail->Body = $msg;				//An HTML or plain text message body
