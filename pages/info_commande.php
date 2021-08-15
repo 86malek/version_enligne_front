@@ -143,7 +143,7 @@ session_start();
 						<div class="panel panel-default">
 							<div class="panel-heading">Validation de la commande</div>
 							<div class="panel-body">
-								<form method="post" id="order_process_form" action="https://expert-gaming.tn/Paiement">
+								<form method="post" id="order_process_form" action="https://expert-gaming.tn/pages/payment.php">
 									<div class="row">
 										<div class="col-md-6" style="border-right:1px solid #ddd;">
 											<div class="row">
@@ -261,7 +261,7 @@ session_start();
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 

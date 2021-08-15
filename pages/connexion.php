@@ -149,7 +149,7 @@
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="js/themejs/application.js"></script>
+	<script type="text/javascript" src="js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 
