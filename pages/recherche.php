@@ -39,7 +39,7 @@ include("../config/fonction.php");
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href="../ico/favicon.png">
+	<link rel="shortcut icon" href="https://<?php echo $_SERVER['SERVER_NAME']?>/ico/favicon.png">
 
 	<!-- Google web fonts
 	============================================ -->
@@ -47,29 +47,29 @@ include("../config/fonction.php");
 
 	<!-- font awesome
 	============================================ -->
-	<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
-	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="../css/themecss/lib.css" rel="stylesheet">
-	<link href="../js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/bootstrap/css/bootstrap.css">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/lib.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 	<!-- Theme CSS
 	============================================ -->
-	<link href="../css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="../css/themecss/so-categories.css" rel="stylesheet">
-	<link href="../css/themecss/so-listing-tabs.css" rel="stylesheet">
-	<link href="../css/header8.css" rel="stylesheet">
-	<link href="../css/footer5.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home8.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
-	<link href="../css/responsive.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so_megamenu.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-categories.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-listing-tabs.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/header8.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/footer5.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home8.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home4.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/responsive.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/theme.css" rel="stylesheet">
 
 
 </head>
@@ -218,7 +218,7 @@ include("../config/fonction.php");
 
 																echo'
 																		<!--full quick view block-->
-																		<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="quickview.php?produit_id='.$produits['eg_produit_id'].'">Aperçu rapide</a>
+																		<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Quickview/'.$produits['eg_produit_id'].'">Aperçu rapide</a>
 																		<!--end full quick view block-->
 																	</div>
 																';
@@ -230,7 +230,7 @@ include("../config/fonction.php");
 																echo'
 																		<div class="right-block">
 																		<div class="caption">
-																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits['eg_produit_id'].'">';
+																			<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$produits['eg_produit_id'].'">';
 																			
 																			
 																			$text = wordwrap($produits['eg_produit_nom'], 80, "***", true); // insertion de marqueurs ***
@@ -338,7 +338,9 @@ include("../config/fonction.php");
 																			echo'
 																			<input type="hidden" name="hidden_name" id="name'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_nom"].'" />
 																			<input type="hidden" name="hidden_price" id="price'.$produits["eg_produit_id"].'" value="'.$produits["eg_produit_prix"].'" />
-																			<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control-panier" value="1" />
+																			<div class="quantity">
+															<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$produits["eg_produit_id"].'" class="form-control-panier" min="1" step="1" value="1">
+															</div>
 																			<button class="addToCart addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$produits["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>
 																			
 																			';
@@ -395,33 +397,24 @@ include("../config/fonction.php");
 	<!-- Include Libs & Plugins
 ============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="../js/themejs/libs.js"></script>
-	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
-	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
-	<script>
-		// Check if Cookie exists
-		if ($.cookie('display')) {
-			view = $.cookie('display');
-		} else {
-			view = 'grid';
-		}
-		if (view) display(view);
-	</script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/application_interne.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/so_megamenu.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 </body>
 

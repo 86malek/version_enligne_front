@@ -77,7 +77,7 @@
 				<div class="blog-listitem">
 					<?php
 					try {
-					$PDO_query_comm = Bdd::connectBdd()->prepare("SELECT * FROM eg_comm WHERE eg_comm_statut = 1 ORDER BY eg_comm_date ASC");
+					$PDO_query_comm = Bdd::connectBdd()->prepare("SELECT * FROM eg_comm WHERE eg_comm_statut = 1 ORDER BY eg_comm_date DESC");
 					$PDO_query_comm->execute();
 					$nb_comm = $PDO_query_comm->rowCount();
 
@@ -106,7 +106,7 @@
 									<div class="itemBlogImg col-md-4 col-sm-12">
 										<div class="article-image banners">
 											<div>
-											<a href="actu_detail.php?id_actu='.$comm['eg_comm_id'].'"><img src="https://betatest.expert-gaming.tn' . $comm['eg_comm_img'] . '" alt="' . $comm['eg_comm_titre'] . '"></a>
+											<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Actualites/'.$comm['eg_comm_id'].'"><img src="https://betatest.expert-gaming.tn' . $comm['eg_comm_img'] . '" alt="' . $comm['eg_comm_titre'] . '"></a>
 											</div>
 										</div>
 									</div>
@@ -115,7 +115,7 @@
 
 										<div class="article-title">
 											<h4>
-												<a href="actu_detail.php?id_actu='.$comm['eg_comm_id'].'">' . $comm['eg_comm_titre'] . '</a>
+												<a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Actualites/'.$comm['eg_comm_id'].'">' . $comm['eg_comm_titre'] . '</a>
 											</h4>
 											
 										</div>
@@ -182,15 +182,15 @@
 	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
   </body>
 

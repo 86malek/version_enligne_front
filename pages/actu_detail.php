@@ -93,7 +93,7 @@ $date = date_format($date, "d/m/Y");
 						<span class="article-date">Date d'insertion : <b><?php echo $date;?></b></span>
 					</div>
 					<div class="form-group">
-						<a href="image/demo/blog/blog4.jpg" class="image-popup"><img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>"></a>
+						<img src="https://betatest.expert-gaming.tn<?php if(!empty($id_comm)){echo $communication['eg_comm_img'];}?>" alt="<?php if(!empty($id_comm)){echo $communication['eg_comm_titre'];}?>">
 					</div>
 					<hr>
 					<div class="article-description">
@@ -126,15 +126,15 @@ $date = date_format($date, "d/m/Y");
 	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
   </body>
 

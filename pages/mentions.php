@@ -33,7 +33,6 @@
     <!-- Libs CSS
 	============================================ -->
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
-	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="css/themecss/lib.css" rel="stylesheet">
@@ -97,7 +96,7 @@
 									<b>Directeur de la publication</b> : Hedi JMEL<br><br>
 									<b>Co-fondateur</b> : Zied GROMBALI<br><br>
 
-									<b>Numéros d'appel</b> (standard du siège social) : Téléphone : +216 58 554 255  du lundi au vendredi de 9h00 à 12h30 et de 13h45 à 18h 
+									<b>Numéro d'appel</b> (standard du siège social) : Téléphone : +216 58 554 255  du lundi au vendredi de 9h00 à 12h30 et de 13h45 à 18h 
 								</div>
 
 							</div>
@@ -108,7 +107,7 @@
 							<div class="col-lg-12 col-md-12 what-client-say">
 								<div class="client-say-content">
 									<h2 class="about-title line-hori">
-										<span>Responsables technique du site</span>
+										<span>Responsables techniques du site</span>
 									</h2>
 									<div class="about-text">
                                 	<b>Développeurs</b> : Mohamed Inaam RACHDI et Malek MENCHAOUI<br><br>
@@ -147,15 +146,14 @@
 	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="js/themejs/application.js"></script>
+	<script type="text/javascript" src="js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 
 </body>

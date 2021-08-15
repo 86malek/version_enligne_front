@@ -45,13 +45,13 @@
 	</div>
 </div>
 
-<div class="module titleLine container-full hidden-md hidden-sm hidden-xs">
+<div class="module titleLine container-full">
 
 	<!-- baniere large-->
 
 		<div class="container">
 			<div class="item">
-				<a  href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/<?php echo $PARAM_url_non_doc_site; ?>pages/products.php?cat_id=11"><img src="image/banner/config.jpg" alt="Configuration" class="img-responsive"></a>
+				<a  href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/<?php echo $PARAM_url_non_doc_site; ?>Produit/cat/11"><img src="image/banner/config.jpg" alt="Configuration" class="img-responsive"></a>
 			</div>
 			<?php
 

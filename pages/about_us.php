@@ -33,7 +33,6 @@
     <!-- Libs CSS
 	============================================ -->
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
-	
 	<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 	<link href="css/themecss/lib.css" rel="stylesheet">
@@ -123,14 +122,14 @@
 	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="js/themejs/application.js"></script>
+	<script type="text/javascript" src="js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 
 </body>

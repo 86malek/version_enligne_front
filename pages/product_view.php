@@ -18,7 +18,7 @@
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href="../ico/favicon.png">
+	<link rel="shortcut icon" href="https://<?php echo $_SERVER['SERVER_NAME']?>/ico/favicon.png">
 
 	<!-- Google web fonts
 	============================================ -->
@@ -26,30 +26,30 @@
 	
 	<!-- font awesome
 	============================================ -->
-	<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 	
 	<!-- Libs CSS
 	============================================ -->
-	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
-	<link href="../js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="../css/themecss/lib.css" rel="stylesheet">
-	<link href="../js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/bootstrap/css/bootstrap.css">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/lib.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 	<!-- Theme CSS
 	============================================ -->
-	<link href="../css/themecss/so_megamenu.css" rel="stylesheet">
-	<link href="../css/themecss/so-categories.css" rel="stylesheet">
-	<link href="../css/themecss/so-listing-tabs.css" rel="stylesheet">
-	<link href="../css/header8.css" rel="stylesheet">
-	<link href="../css/footer5.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home8.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/home4.css" rel="stylesheet">
-	<link href="../css/responsive.css" rel="stylesheet">
-	<link id="color_scheme" href="../css/theme.css" rel="stylesheet">
-	<link href="../css/configurateur.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so_megamenu.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-categories.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/themecss/so-listing-tabs.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/header8.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/footer5.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home8.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/home4.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/responsive.css" rel="stylesheet">
+	<link id="color_scheme" href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/theme.css" rel="stylesheet">
+	<link href="https://<?php echo $_SERVER['SERVER_NAME']?>/css/configurateur.css" rel="stylesheet">
 
 
 </head>
@@ -266,7 +266,7 @@
 													$quickview_marque = $PDO_query_quickview_marque->fetch();
 
 													echo'
-														<div class="brand"><span>Marque : </span><u><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/products.php?marque_id='.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
+														<div class="brand"><span>Marque : </span><u><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Produit/Marque/'.$quickview_marque['eg_marque_id'].'" class="cutom-parent">' . $quickview_marque['eg_marque_nom'] . '</u></a> </div>
 													';
 													
 													$PDO_query_quickview_marque->closeCursor();
@@ -643,14 +643,14 @@
 															}	
 
 														echo'
-														<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/quickview.php?produit_id='.$produits_lies['eg_produit_id'].'">Aperçu rapide</a>
+														<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Quickview/'.$produits_lies['eg_produit_id'].'">Aperçu rapide</a>
 													</div>
 				
 				
 													<div class="right-block">
 													
 														<div class="caption">
-															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
+															<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$produits_lies['eg_produit_id'].'">' . $produits_lies['eg_produit_nom'] . '</a></h4>
 															<h5>Référence: ' . $produits_lies['eg_produit_reference'] . '</h5>  
 															<div class="ratings">
 																<div class="box-review form-group">
@@ -792,24 +792,24 @@
 	<!-- Include Libs & Plugins
 ============================================ -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/owl-carousel/owl.carousel.js"></script>
-	<script type="text/javascript" src="../js/themejs/libs.js"></script>
-	<script type="text/javascript" src="../js/unveil/jquery.unveil.js"></script>
-	<script type="text/javascript" src="../js/countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
-	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 	<!-- Theme files
 ============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
-	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
-	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/application_interne.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/so_megamenu.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 	<script>
 		// Get the modal

@@ -6028,9 +6028,12 @@ body {
   font-weight: bold;
   margin-left: 55px;
   margin-top: 0;
-  padding-top: 0px;
+  padding-top: 16px;
   margin-bottom: 10px;
   line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .slider-blog-post .postTitle a {
   color: #333333;

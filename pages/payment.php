@@ -56,8 +56,8 @@ $status = 1;
 
   unset($_SESSION["shopping_cart"]);
 
-  $_SESSION["success_message"] = "Vos dérnieres commandes sont en cours de traitement par nos experts.";
-  header('location:info_commande.php');
+  $_SESSION["success_message"] = "Votre commande est en cours de traitement.";
+  header('location:https://expert-gaming.tn/Commande');
 }
 
 

@@ -25,7 +25,7 @@ if(!empty($_SESSION["shopping_cart"]))
 	{
 		$output .= '
 		<tr>
-			<td class="text-left"><a class="cart_product_name" href="product.html">'.$values["product_name"].'</a></td>
+			<td class="text-left"><a class="cart_product_name" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$values["product_name"].'">'.$values["product_name"].'</a></td>
 			<td class="text-center">'.$values["product_quantity"].'</td>
 			<td class="text-right">'.number_format($values["product_quantity"] * $values["product_price"], 3).' TND</td>
 			<td class="text-right"><button name="delete" class="btn btn-danger btn-xs delete" id="'. $values["product_id"].'">X</button></td>

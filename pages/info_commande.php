@@ -143,7 +143,7 @@ session_start();
 						<div class="panel panel-default">
 							<div class="panel-heading">Validation de la commande</div>
 							<div class="panel-body">
-								<form method="post" id="order_process_form" action="payment.php">
+								<form method="post" id="order_process_form" action="https://expert-gaming.tn/pages/payment.php">
 									<div class="row">
 										<div class="col-md-6" style="border-right:1px solid #ddd;">
 											<div class="row">
@@ -257,12 +257,11 @@ session_start();
 	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 

@@ -864,7 +864,7 @@ $(document).ready(function() {
 		function load_cart_data()
 		{
 		$.ajax({
-		url:"include/fetch_cart.php",
+		url:"https://expert-gaming.tn/include/fetch_cart.php",
 		method:"POST",
 		dataType:"json",
 		success:function(data)
@@ -892,7 +892,7 @@ $(document).ready(function() {
 		if(product_quantity > 0)
 		{
 		$.ajax({
-			url:"include/action.php",
+			url:"https://expert-gaming.tn/include/action.php",
 			method:"POST",
 			data:{product_id:product_id, product_name:product_name, product_price:product_price, product_quantity:product_quantity, action:action},
 			success:function(data)
@@ -915,7 +915,7 @@ $(document).ready(function() {
 		if(confirm("Êtes-vous sûr de vouloir supprimer ce produit ?"))
 		{
 		$.ajax({
-			url:"include/action.php",
+			url:"https://expert-gaming.tn/include/action.php",
 			method:"POST",
 			data:{product_id:product_id, action:action},
 			success:function(data)
@@ -935,7 +935,7 @@ $(document).ready(function() {
 		$(document).on('click', '#clear_cart', function(){
 		var action = 'empty';
 		$.ajax({
-		url:"include/action.php",
+		url:"https://expert-gaming.tn/include/action.php",
 		method:"POST",
 		data:{action:action},
 		success:function()
@@ -948,7 +948,7 @@ $(document).ready(function() {
 		});
 
 			/*$('#search_data').autocomplete({
-				source: "include/fetch.php",
+				source: "https://expert-gaming.tn/include/fetch.php",
 				minLength: 1,
 				select: function(event, ui)
 				{

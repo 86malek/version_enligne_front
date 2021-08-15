@@ -18,7 +18,7 @@
 
 	<!-- Favicon
 	============================================ -->
-	<link rel="shortcut icon" href=../ico/favicon.png">
+	<link rel="shortcut icon" href="../ico/favicon.png">
 
 	<!-- Google web fonts
 	============================================ -->
@@ -124,7 +124,7 @@
 										<li><span class="fas fa-map-pin"></span> Menzah 6, galerie le Colisée 8<sup>éme</sup> boutique à droite, <br>
 										En face de la Clinique Farabi</li>
 										<li><span class="fas fa-envelope"></span> <a href="mailto:contact@expert-gaming.tn">contact@expert-gaming.tn</a></li>
-										<li><span class="fas fa-phone">&nbsp;</span> Tel 1 : 58 554 255<br>Tel 2 : 28 516 916</li>
+										<li><span class="fas fa-phone">&nbsp;</span> Téléphone 1 : 58 554 255<br>Téléphone 2 : 28 516 916</li>
 									</ul>
 								</div>
 							</div>
@@ -177,7 +177,7 @@
 										</div>
 										<div class="form-group required">
 										<div class="pull-right">
-											<div class="g-recaptcha" data-sitekey="6Ldv2bcUAAAAAFeYuQAQWH7I_BVv2_2_vvmn2Fpp"></div>
+											<div class="g-recaptcha" data-sitekey="6Lcmj_UbAAAAAIoUhn8fBBYLX0ZdBszd5r1GqFuU"></div>
 											<span id="captcha_error" class="text-danger"></span>
 											</div>
 										</div>
@@ -218,15 +218,14 @@
 	<script type="text/javascript" src="../js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 	<!-- Theme files
 	============================================ -->
-	<script type="text/javascript" src="../js/themejs/application.js"></script>
+	<script type="text/javascript" src="../js/themejs/application_interne.js"></script>
 	<script type="text/javascript" src="../js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="../js/themejs/so_megamenu.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script>
 		$(document).ready(function(){

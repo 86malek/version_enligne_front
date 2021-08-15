@@ -116,7 +116,7 @@ Avatar User profile
   background-color: #777;
   color: #fff;
   width: 45px;
-  bottom: 50px;
+  bottom: 90px;
   padding: 5px 0;
   overflow: hidden;
   z-index: 40;
@@ -3424,7 +3424,7 @@ input[type="color"].form-control {
 }
 
 input[type="number"].form-control-panier {
-  width: 50px;
+  width: 75px;
   position: relative;
     border: 1px solid #ddd;
     background: transparent;
@@ -6778,4 +6778,93 @@ div.tab-slider .so-listing-tabs .owl2-controls .owl2-nav .owl2-next:hover {
 .copyright-text{
 
   text-align: center;
+}
+.quantity {
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 36px;
+  margin-right:5px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
+
+.ui-autocomplete-row
+{
+  padding:8px;
+  background-color: #f4f4f4;
+  border-bottom:1px solid #ccc;
+  font-weight:bold;
+}
+.ui-autocomplete-row:hover
+{
+  background-color: #ddd;
+}
+.ui-autocomplete{
+
+  z-index:99999 !important;
+  top: -5301.47px !important;
+    left: 644px !important;
+    width: 639px !important;
 }

@@ -49,12 +49,15 @@
 						<div class="modcontent">
 
 							<div class="list-inline">
-								<a title="Facebook" href="https://www.facebook.com/search/top?q=expert%20gaming" target="_blank"> 
+								<a title="Facebook" href="https://www.facebook.com/expertgamingtunisie" target="_blank"> 
 									<span class="fab fa-facebook fa- social-icon"></span> 
 								</a>
-								<a title="Youtube" href="#" target="_blank"> 
+								<!-- <a title="Youtube" href="#" target="_blank"> 
 									<span class="fab fa-youtube fa- social-icon"></span> 
-								</a>	
+								</a>	 -->
+								<a title="instagram" href="https://www.instagram.com/expert_gaming_tn/?hl=fr" target="_blank"> 
+									<span class="fab fa-instagram fa- social-icon"></span> 
+								</a>
 							</div>
 
 						</div>
@@ -67,7 +70,7 @@
 								<ul class="menu">
 									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>A_propos_de_nous">À propos de nous</a></li>
 									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Mentions_legales">Mentions légales</a></li>
-									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Mentions_legales">Actualités</a></li>
+									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Actualites">Actualités</a></li>
 								</ul>
 							</div>
 						</div>
@@ -80,7 +83,7 @@
 								<ul class="menu">
 									<li><a href="https://<?php echo $_SERVER['SERVER_NAME']?>/<?php echo $PARAM_url_non_doc_site?>Contact">Nous contacter</a></li>
 									<!-- <li><a href="#">Retour</a></li> -->
-									<li><a href="Sitemap">Site Map</a></li>
+									<li><a href="#">Site Map</a></li>
 								</ul>
 							</div>
 						</div>

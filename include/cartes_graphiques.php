@@ -49,12 +49,12 @@
 										}
 										echo '
 										<!--full quick view block-->
-										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/quickview.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">Aperçu rapide</a>
+										<a class="quickview iframe-link visible-lg" data-fancybox-type="iframe" href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'Quickview/'.$cartes_graphiques['eg_produit_id'].'">Aperçu rapide</a>
 										<!--end full quick view block-->
 									</div>
 									<div class="right-block">
 										<div class="caption">
-											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'pages/product_view.php?produit_id='.$cartes_graphiques['eg_produit_id'].'">';
+											<h4><a href="https://'.$_SERVER['SERVER_NAME'].'/'.$PARAM_url_non_doc_site.'ProduitDetails/'.$cartes_graphiques['eg_produit_id'].'">';
 																		$text = wordwrap($cartes_graphiques['eg_produit_nom'], 50, "***", true); // insertion de marqueurs ***
 
 																		$tcut = explode("***", $text); // on créé un tableau à partir des marqueurs ***
@@ -162,7 +162,10 @@
 											echo'
 											<input type="hidden" name="hidden_name" id="name'.$cartes_graphiques["eg_produit_id"].'" value="'.$cartes_graphiques["eg_produit_nom"].'" />
              								<input type="hidden" name="hidden_price" id="price'.$cartes_graphiques["eg_produit_id"].'" value="'.$cartes_graphiques["eg_produit_prix"].'" />
-											<input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$cartes_graphiques["eg_produit_id"].'" class="form-control-panier" value="1" />
+											<div class="quantity">
+											 <input type="number" name="quantity" onkeydown="return event.keyCode !== 69" id="quantity'.$cartes_graphiques["eg_produit_id"].'" class="form-control-panier" min="1" step="1" value="1">
+										   	</div>
+
 											<button class="addToCart  addToCart--notext add_to_cart" type="button" name="add_to_cart" id="'.$cartes_graphiques["eg_produit_id"].'" value="Add to Cart" onclick="cart.add(\'42\', \'1\');"><i class="fas fa-cart-plus"></i> <span class="button-group__text">Ajouter au panier</span></button>';
 
 										}
