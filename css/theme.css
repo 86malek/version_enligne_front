@@ -6861,3 +6861,10 @@ input[type=number]
 {
   background-color: #ddd;
 }
+.ui-autocomplete{
+
+  z-index:99999 !important;
+  top: -5301.47px !important;
+    left: 644px !important;
+    width: 639px !important;
+}

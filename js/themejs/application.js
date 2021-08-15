@@ -946,7 +946,23 @@ $(document).ready(function() {
 		}
 		})
 		});
+
+		$('#search_data').autocomplete({
+			source: "https://www.expert-gaming.tn/include/fetch.php",
+			minLength: 1,
+			select: function(event, ui)
+			{
+			  $('#search_data').val(ui.item.value);
+			}
+		  }).data('ui-autocomplete')._renderItem = function(ul, item){
+			return $("<li class='ui-autocomplete-row'></li>")
+			  .data("item.autocomplete", item)
+			  .append(item.label)
+			  .appendTo(ul);
+		  };
+		  
 		});
+
 		function addProductNotice(title, thumb, text, type) {
 			$.jGrowl.defaults.closer = false;
 			//Stop jGrowl
@@ -959,6 +975,7 @@ $(document).ready(function() {
 				theme: type
 			});
 		}
+
 		jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
 		jQuery('.quantity').each(function() {
 		  var spinner = jQuery(this),
@@ -991,20 +1008,3 @@ $(document).ready(function() {
 		  });
 	
 		});
-		$(document).ready(function(){
-      
-			$('#search_data').autocomplete({
-			  source: "fetch.php",
-			  minLength: 1,
-			  select: function(event, ui)
-			  {
-				$('#search_data').val(ui.item.value);
-			  }
-			}).data('ui-autocomplete')._renderItem = function(ul, item){
-			  return $("<li class='ui-autocomplete-row'></li>")
-				.data("item.autocomplete", item)
-				.append(item.label)
-				.appendTo(ul);
-			};
-		
-		  });

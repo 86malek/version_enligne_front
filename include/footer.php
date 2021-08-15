@@ -55,8 +55,8 @@
 								<!-- <a title="Youtube" href="#" target="_blank"> 
 									<span class="fab fa-youtube fa- social-icon"></span> 
 								</a>	 -->
-								<a title="instagram" href="#" target="_blank"> 
-									<span class="fab fa-youtube fa- social-icon"></span> 
+								<a title="instagram" href="https://www.instagram.com/expert_gaming_tn/?hl=fr" target="_blank"> 
+									<span class="fab fa-instagram fa- social-icon"></span> 
 								</a>
 							</div>
 
