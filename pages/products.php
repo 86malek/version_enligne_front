@@ -113,7 +113,7 @@ include("../config/fonction.php");
 		<!-- Main Container  -->
         <div class="main-container container">
 			<ul class="breadcrumb">
-				<li><a href="https://betatestfront.expert-gaming.tn/"><i class="fa fa-home"></i></a></li>
+				<li><a href="https://www.expert-gaming.tn/"><i class="fa fa-home"></i></a></li>
 					<?php
 
 							if($marque_id != 0){
@@ -2321,8 +2321,7 @@ include("../config/fonction.php");
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/modernizr/modernizr-2.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 	<!-- Theme files
@@ -2330,15 +2329,8 @@ include("../config/fonction.php");
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/application.js"></script>
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/homepage.js"></script>
 	<script type="text/javascript" src="https://<?php echo $_SERVER['SERVER_NAME']?>/js/themejs/so_megamenu.js"></script>
-	<script>
-		// Check if Cookie exists
-		if ($.cookie('display')) {
-			view = $.cookie('display');
-		} else {
-			view = 'grid';
-		}
-		if (view) display(view);
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	
 
 </body>
 

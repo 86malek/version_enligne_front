@@ -200,7 +200,6 @@
 <script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 <script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="js/modernizr/modernizr-2.6.2.min.js"></script>
 
 <!-- Theme files
 ============================================ -->
